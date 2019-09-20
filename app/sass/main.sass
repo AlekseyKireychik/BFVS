@@ -56,16 +56,16 @@ body
 			content: ''
 			position: absolute
 			left: 0
-			border-bottom: 4px solid $blueaccent
+			border-bottom: 4px solid $accent
 			bottom: 0
 			width: 132px
-
 	.link
 		font-family: 'Montserrat', sans-serif
 		font-weight: 500
 		font-size: 18px
 		line-height: 22px
-		color: $blueaccent
+		color: $accent
+		padding-bottom: 15px
 
 .newshome
 	padding: 100px 0 42px
@@ -93,7 +93,7 @@ body
 					padding: 12px 15px
 
 .eventshome
-	padding: 100px 0 42px
+	padding: 100px 0 135px
 	background-image: url(../img/_src/bgvel.png)
 	background-size: cover
 	background-position: left 10% center
@@ -105,19 +105,21 @@ body
 		justify-content: space-between
 		align-items: center
 		padding-top: 50px
+		margin-bottom: 50px	
 		.events__textitem	
 			box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25)
-			border-radius: 10px
-			min-height: 160px
-			min-width: 284px
-			max-width: 284px	
-			background-color: #fff	
+			border-radius: 10px			
+			background-color: #fff
 			.events__textlink				
 				position: relative
 				overflow: hidden
 				display: flex
 				justify-content: center
 				align-items: center	
+				min-height: 160px
+				min-width: 284px
+				max-width: 284px
+				text-decoration: none				
 				.events__textcontent
 					font-family: 'Montserrat', sans-serif
 					font-weight: 700
@@ -126,7 +128,194 @@ body
 					text-align: center
 					color: #000
 	.events__list
-		.events__item
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.events__item					
+			.events__link
+				overflow: hidden
+				position: relative
+				display: flex
+				justify-content: center
+				align-items: center					
+				.events__text
+					position: absolute
+					padding: 20px
+					bottom: 0
+					left: 0
+					font-family: 'Montserrat', sans-serif
+					font-weight: 700
+					font-size: 14px
+					line-height: 17px
+					text-align: center
+					color: #fff
+.infoplatform
+	background-image: url(../img/_src/infoplace.jpg)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	min-height: 550px	
+	position: relative
+	.container				
+		.infoplatform__caption
+			max-width: 500px
+			position: absolute
+			bottom: 20px
+			right: 122px
+			background: #fff
+			box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25)
+			border-radius: 20px
+			padding: 25px
+			.infoplatform__title
+				font-family: 'Montserrat', sans-serif
+				font-weight: 700
+				font-size: 36px
+				line-height: 44px
+			.infoplatform__text
+				font-family: 'Montserrat', sans-serif
+				font-weight: 500
+				font-size: 18px
+				line-height: 22px
+			.infoplatform__link	
+				font-family: 'Montserrat', sans-serif
+				font-weight: 500
+				font-size: 18px
+				line-height: 22px	
+				color: $accent
+
+.gallery
+	background-image: url(../img/_src/bgvel.png)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	padding: 100px 0 145px
+
+.container			
+	.title
+		font-family: 'Montserrat', sans-serif
+		font-weight: 700
+		font-size: 48px
+		line-height: 59px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			border-bottom: 4px solid $accent
+			bottom: 0
+			width: 132px
+
+.gallery__list	
+	display: grid
+	grid-gap: $gutter
+	grid-template-columns: 2fr 2fr
+	grid-template-rows: 2fr
+	padding: 50px 0 0
+	.gallery__item01
+		grid-column-start: 1	
+		grid-column-end: 3
+		// grid-row-start: 1
+		// grid-row-end: 2
+	.gallery__item02
+		grid-column-start: 1	
+		grid-column-end: 2
+		// grid-row-start: 2
+		// grid-row-end: 3
+	.gallery__item03
+		grid-column-start: 2	
+		grid-column-end: 3
+		// grid-row-start: 2
+		// grid-row-end: 3
+	.gallery__item04
+		grid-column-start: 3	
+		grid-column-end: 3
+	.gallery__item05
+		grid-column-start: 3	
+		grid-column-end: 3
+	.gallery__item06
+		grid-column-start: 3	
+		grid-column-end: 4
+	.gallery__item		
+		border-radius: 10px	
+		.gallery__link
+			display: block	
+			overflow: hidden
+			position: relative
+			.gallery__img					
+				background: rgba(0, 0, 0, 0.3)		
+				border-radius: 10px			
+			.gallery__title
+				position: absolute
+				bottom: 0
+				left: 0 
+				font-family: 'Montserrat', sans-serif
+				font-weight: 700
+				font-size: 14px
+				line-height: 17px
+				color: #fff
+				padding: 20px
+				opacity: 0
+				transition: .3s
+			&:hover
+				.gallery__title
+					opacity: 1
+					transition: .3s
+.gallery__wrap
+	text-align: center
+	margin: 0 auto
+	.gallery__more
+		font-family: 'Montserrat', sans-serif
+		font-weight: 500
+		font-size: 18px
+		line-height: 22px
+		color: $accent
+		text-decoration: none
+		position: relative
+		&:before
+			content: url(../img/_src/arrbottom.png)
+			position: absolute
+			transform: translate(-50%)
+			left: 50%
+			bottom: -15px
+			transition: .3s
+		&:hover
+			&:before
+				bottom: -20px
+				transition: .3s
+.documents
+	
+	.documents__list
+		padding: 50px 0 0
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-rows: 1fr 1fr 1fr
+		.documents__item
+			padding: 50px 20px
+			text-align: center
+			.documents__content	
+				font-family: 'Montserrat', sans-serif
+				font-weight: 500
+				font-size: 24px
+				line-height: 29px
+				text-decoration: none
+				color: $text
+				
+footer
+	background-color: $accent
+	padding-top: 50px
+	.partners
+		.title
+			color: #fff
+		.partners__brand
+			padding-top: 50px
+			.partners__list
+				.partners__item
+					margin-bottom: 40px					
+					.partners__img
+						border-radius: 10px
+						height: 65px
+						
+
 .img-responsive
 	display: block
 	max-width: 100%
