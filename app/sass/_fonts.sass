@@ -10,15 +10,45 @@
 // 900 Extra Black or Fat or Ultra Black
 
 
-@mixin font($f-name, $f-style, $f-weight, $f-url)
+@mixin font($f-name, $f-style, $f-weight, $f-url, $f-format)
 	@font-face
 		font-family: $f-name
 		font-style: $f-style
 		font-weight: $f-weight
-		src: url($f-url) format('woff2')
+		src: url($f-url) format($f-format)
 
+/* montserrat-300 - cyrillic */
+@include font('Montserrat', normal, 300, '../fonts/montserrat-v14-cyrillic-300.woff2', 'woff2' ) /* Super Modern Browsers */
+@include font('Montserrat', normal, 300, '../fonts/montserrat-v14-cyrillic-300.woff', 'woff' ) /* Modern Browsers */
+@include font('Montserrat', normal, 300, '../fonts/montserrat-v14-cyrillic-300.ttf', 'truetype' ) /* Safari, Android, iOS */
+@include font('Montserrat', normal, 300, '../fonts/montserrat-v14-cyrillic-300.svg#Montserrat', 'svg' ) /* Legacy iOS */
 
-@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2')
-@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2')
-@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2')
-@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+/* montserrat-regular - cyrillic */
+@include font('Montserrat', normal, 400, '../fonts/montserrat-v14-cyrillic-regular.woff2', 'woff2' ) /* Super Modern Browsers */
+@include font('Montserrat', normal, 400, '../fonts/montserrat-v14-cyrillic-regular.woff', 'woff' ) /* Modern Browsers */
+@include font('Montserrat', normal, 400, '../fonts/montserrat-v14-cyrillic-regular.ttf', 'truetype' ) /* Safari, Android, iOS */
+@include font('Montserrat', normal, 400, '../fonts/montserrat-v14-cyrillic-regular.svg#Montserrat', 'svg' ) /* Legacy iOS */
+
+/* montserrat-500 - cyrillic */
+@include font('Montserrat', normal, 500, '../fonts/montserrat-v14-cyrillic-500.woff2', 'woff2' ) /* Super Modern Browsers */
+@include font('Montserrat', normal, 500, '../fonts/montserrat-v14-cyrillic-500.woff', 'woff' ) /* Modern Browsers */
+@include font('Montserrat', normal, 500, '../fonts/montserrat-v14-cyrillic-500.ttf', 'truetype' ) /* Safari, Android, iOS */
+@include font('Montserrat', normal, 500, '../fonts/montserrat-v14-cyrillic-500.svg#Montserrat', 'svg' ) /* Legacy iOS */
+
+/* montserrat-600 - cyrillic */
+@include font('Montserrat', normal, 600, '../fonts/montserrat-v14-cyrillic-600.woff2', 'woff2' ) /* Super Modern Browsers */
+@include font('Montserrat', normal, 600, '../fonts/montserrat-v14-cyrillic-600.woff', 'woff' ) /* Modern Browsers */
+@include font('Montserrat', normal, 600, '../fonts/montserrat-v14-cyrillic-600.ttf', 'truetype' ) /* Safari, Android, iOS */
+@include font('Montserrat', normal, 600, '../fonts/montserrat-v14-cyrillic-600.svg#Montserrat', 'svg' ) /* Legacy iOS */
+
+/* montserrat-700 - cyrillic */
+@include font('Montserrat', normal, 700, '../fonts/montserrat-v14-cyrillic-700.woff2', 'woff2' ) /* Super Modern Browsers */
+@include font('Montserrat', normal, 700, '../fonts/montserrat-v14-cyrillic-700.woff', 'woff' ) /* Modern Browsers */
+@include font('Montserrat', normal, 700, '../fonts/montserrat-v14-cyrillic-700.ttf', 'truetype' ) /* Safari, Android, iOS */
+@include font('Montserrat', normal, 700, '../fonts/montserrat-v14-cyrillic-700.svg#Montserrat', 'svg' ) /* Legacy iOS */
+
+/* montserrat-900 - cyrillic */
+@include font('Montserrat', normal, 900, '../fonts/montserrat-v14-cyrillic-900.woff2', 'woff2' ) /* Super Modern Browsers */
+@include font('Montserrat', normal, 900, '../fonts/montserrat-v14-cyrillic-900.woff', 'woff' ) /* Modern Browsers */
+@include font('Montserrat', normal, 900, '../fonts/montserrat-v14-cyrillic-900.ttf', 'truetype' ) /* Safari, Android, iOS */
+@include font('Montserrat', normal, 900, '../fonts/montserrat-v14-cyrillic-900.svg#Montserrat', 'svg' ) /* Legacy iOS */
