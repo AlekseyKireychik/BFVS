@@ -1,5 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function(){
+	
+	// $('#carouselHome').carousel();
 
-	// Custom JS
-
+	// $('#carouselHome').on('click', function() {
+	// 	console.log('hf,j');
+	// }
 });

@@ -31,8 +31,6 @@ body
 	overflow-x: hidden
 	color: $text
 
-// Custom Sass / Remove before use
-
 .container
 	max-width: 1196px
 	padding:
@@ -41,11 +39,18 @@ body
 	margin:
 		left: auto
 		right: auto
-
+.content
+	font-family: 'Montserrat', sans-serif
+	font-weight: 500
+	font-size: 18px
+	line-height: 22px
+	padding-top: 60px
+	padding-bottom: 50px
 .row
 	display: flex
 	align-items: flex-end
 	justify-content: space-between
+	margin: 0
 	.title
 		font-family: 'Montserrat', sans-serif
 		font-weight: 700
@@ -66,16 +71,172 @@ body
 		line-height: 22px
 		color: $accent
 		padding-bottom: 15px
-
+header
+	.container
+		.header__top
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding: 30px 0 14px
+			.header__logo
+			.header__languages
+				position: relative								
+				.header__list
+					display: flex
+					justify-content: space-between
+					align-items: center
+					background: $accent
+					border-radius: 10px
+					margin: 0
+					.header__item
+						padding: 8px 0
+						.header__btn
+							font-family: 'Montserrat', sans-serif
+							font-weight: 700
+							font-size: 14px
+							line-height: 17px
+							color: #fff
+							background: $accent
+							border: none
+							padding: 5px 38px
+						&:nth-child(even)
+							position: relative
+							&:before
+								content: ''
+								position: absolute
+								right: 0
+								border-right: 2px solid #fff
+								bottom: 6px
+								height: 32px
+							&:after
+								content: ''
+								position: absolute
+								left: 0
+								border-right: 2px solid #fff
+								bottom: 6px
+								height: 32px					
+				.search__formwrap
+					position: absolute
+					padding: 5px 15px 5px 15px
+					bottom: -40px
+					left: 0
+					box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5)
+					border-radius: 10px
+					display: none
+					.search__container
+						width: 100%
+						.search__form
+							.search__input
+								font-family: 'Montserrat', sans-serif
+								font-weight: 400
+								font-size: 14px
+								line-height: 19px
+								color: rgba(0, 0, 0, 0.5)
+								padding: 6px
+								border-radius: 3px
+								border: 1px solid #c4c4c4
+							.search__closeform
+								font-family: 'Montserrat', sans-serif
+								font-weight: 700
+								font-size: 14px
+								line-height: 17px
+								padding: 5px 10px
+								border-radius: 10px
+								background: $accent
+								color: #fff
+								cursor: pointer
+		.header__nav
+			.innerpages
+				border-bottom: 4px solid $accent
+			.header__list
+				display: flex
+				justify-content: space-between
+				align-items: center
+				.header__item
+					margin: 20px 0
+					.header__link
+						font-family: 'Montserrat', sans-serif
+						font-weight: 700
+						font-size: 14px
+						line-height: 17px
+						text-align: center
+						color: $text
+						text-decoration: none
+						padding: 0 20px
+						transition: .3s
+						&:hover
+							color: $accent
+							transition: .3s
+.carousel__baner
+	.carousel
+		.carousel-indicators
+			margin: 0 0 20px
+			left: 7.5%
+			right: auto
+			bottom: 0
+			top: auto
+			li 
+				width: 25px
+				height: 25px
+				margin: 5px
+				cursor: pointer
+				background-color: #fff
+				border: 5px solid #fff
+				border-radius: 25px
+				opacity: 1
+			li.active
+				background-color: $accent
+		.carousel-inner
+			.carousel-item
+				.carousel-img
+					width: 100%
+					object-fit: cover
+				.container
+					position: relative
+					.carousel-caption
+						max-width: 500px
+						background: #fff
+						border-radius: 20px
+						box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25)
+						text-align: left
+						padding: 25px
+						left: auto
+						right: 0
+						bottom: 20px
+						.carousel-title
+							font-family: 'Montserrat', sans-serif
+							font-weight: 700
+							font-size: 30px
+							line-height: 37px
+							color: $text
+						.carousel-text
+							font-family: 'Montserrat', sans-serif
+							font-weight: 500
+							font-size: 18px
+							line-height: 22px
+							color: $text
+						.carousel-link
+							font-family: 'Montserrat', sans-serif
+							font-weight: 500
+							font-size: 18px
+							line-height: 22px
+							color: $accent
 .newshome
 	padding: 100px 0 42px
 
+.newspage
+	padding: 86px 0 0
+	background-image: url(../img/_src/bgcontacts.png)
+	background-size: cover
+	background-position: bottom
+	background-repeat: no-repeat
 .news
 	margin: 50px 0 0
 	.news__list
-		display: flex
-		justify-content: space-between
-		align-items: center
+		display: grid
+		grid-gap: $gutter
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-rows: 2fr
 		.news__item
 			.news__link
 				position: relative
@@ -91,10 +252,30 @@ body
 					line-height: 20px
 					color: #fff
 					padding: 12px 15px
+	.news__pagination
+		display: flex
+		align-items: center
+		justify-content: center
+		padding-top: 15px
+		padding-bottom: 30px
+		margin-bottom: 0
+		.news__item
+			font-family: 'Montserrat', sans-serif
+			font-weight: 700
+			font-size: 14px
+			line-height: 17px
+			color: $text
+			padding: 0 15px
+			&.active
+				font-family: 'Montserrat', sans-serif
+				font-weight: 700
+				font-size: 14px
+				line-height: 17px
+				color: $accent
 
 .eventshome
 	padding: 100px 0 135px
-	background-image: url(../img/_src/bgvel.png)
+	background-image: url(../img/_src/evntshomebg.png)
 	background-size: cover
 	background-position: left 10% center
 	background-repeat: no-repeat
@@ -126,7 +307,7 @@ body
 					font-size: 18px
 					line-height: 22px
 					text-align: center
-					color: #000
+					color: $text
 	.events__list
 		display: flex
 		justify-content: space-between
@@ -202,7 +383,7 @@ body
 			position: absolute
 			left: 0
 			border-bottom: 4px solid $accent
-			bottom: 0
+			bottom: -2px
 			width: 132px
 
 .gallery__list	
@@ -289,6 +470,15 @@ body
 	background-repeat: no-repeat
 	padding-bottom: 50px	
 
+.documents__page
+	background-image: url(../img/_src/evntshomebg.png)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	padding-bottom: 50px
+	.container	
+		margin-top: 96px	
+
 .documents	
 	.documents__list
 		padding: 50px 0 0
@@ -335,7 +525,66 @@ body
 						position: absolute
 						right: 0
 						bottom: -160%
-				
+.aboutus
+	background-image: url(../img/_src/bgaboutus.png)
+	background-size: cover
+	background-position: bottom left
+	background-repeat: no-repeat
+
+.contacts
+	background-image: url(../img/_src/bgcontacts.png)
+	background-size: cover
+	background-position: bottom
+	background-repeat: no-repeat	
+	padding-top: 84px
+	.contacts__content
+		padding-top: 60px
+		position: relative
+		.contacts__left
+			display: flex
+			align-items: center
+			flex-direction: column
+			max-width: 540px
+			margin-right: auto
+			text-align: center	
+			padding-bottom: 65px		
+			.contacts__subtitle
+				font-family: 'Montserrat', sans-serif
+				font-weight: 700
+				font-size: 22px
+				line-height: 29px
+				color: $text
+				max-width: 450px
+			.contacts__list
+				.contacts__item
+					display: flex
+					align-items: center
+					justify-content: space-between
+					flex-direction: column
+					padding-top: 35px
+					.contacts__description
+						font-family: 'Montserrat', sans-serif
+						font-weight: 700
+						font-size: 22px
+						line-height: 29px
+						color: $text
+						margin-bottom: 10px
+					.contacts__info
+						font-family: 'Montserrat', sans-serif
+						font-weight: 700
+						font-size: 24px
+						line-height: 29px
+						text-decoration: none
+						color: $accent
+					.contacts__phone
+						padding-top: 35px		
+		img
+			position: absolute
+			transform: translate(-50%)
+			left: 81%
+			bottom: 11%
+			border-radius: 90px 0px 0px 90px
+			box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.5)
 footer
 	background-color: $accent
 	padding-top: 50px
