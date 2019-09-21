@@ -184,7 +184,7 @@ body
 				color: $accent
 
 .gallery
-	background-image: url(../img/_src/bgvel.png)
+	background-image: url(../img/_src/galleryhomebg.png)
 	background-size: cover
 	background-position: center
 	background-repeat: no-repeat
@@ -282,16 +282,24 @@ body
 			&:before
 				bottom: -20px
 				transition: .3s
-.documents
-	
+.documents__home
+	background-image: url(../img/_src/Documentsbg.png)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	padding-bottom: 50px	
+
+.documents	
 	.documents__list
 		padding: 50px 0 0
+		margin-bottom: 0
 		display: grid
 		grid-template-columns: 1fr 1fr 1fr
 		grid-template-rows: 1fr 1fr 1fr
 		.documents__item
 			padding: 50px 20px
 			text-align: center
+			align-self: center
 			.documents__content	
 				font-family: 'Montserrat', sans-serif
 				font-weight: 500
@@ -299,28 +307,101 @@ body
 				line-height: 29px
 				text-decoration: none
 				color: $text
+			&:nth-child(2)
+					position: relative
+					&:before
+						content: url(../img/_src/documentbordergorizont.png)
+						position: absolute
+						right: -100%
+						bottom: -30px
+			&:nth-child(5)
+					position: relative
+					&:before
+						content: url(../img/_src/documentbordergorizont.png)
+						position: absolute
+						right: -100%
+						bottom: -40px
+			&:nth-child(4)
+					position: relative
+					&:before
+						content: url(../img/_src/documentbordervertical.png)
+						position: absolute
+						right: 0
+						bottom: -160%
+			&:nth-child(5)
+					position: relative
+					&:after
+						content: url(../img/_src/documentbordervertical.png)
+						position: absolute
+						right: 0
+						bottom: -160%
 				
 footer
 	background-color: $accent
 	padding-top: 50px
+	padding-bottom: 112px
 	.partners
 		.title
 			color: #fff
 		.partners__brand
-			padding-top: 50px
+			padding: 50px 20px 0
 			.partners__list
 				.partners__item
 					margin-bottom: 40px					
 					.partners__img
 						border-radius: 10px
 						height: 65px
+				&:nth-child(2)
+					position: relative
+					&:before
+						content: url(../img/_src/bordergradient.png)
+						position: absolute
+						left: -25px
+						top: 0px
+					&:after
+						content: url(../img/_src/bordergradient.png)
+						position: absolute
+						right: -25px
+						top: 0px
+	.footer__nav
+		.footer__list
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding: 50px 0 30px
+			.footer__item				
+				.footer__link
+					font-family: 'Montserrat', sans-serif
+					font-weight: 500
+					font-size: 18px
+					line-height: 22px
+					text-decoration: none
+					color: #fff
+					padding: 0 15px
+	.footer__bottom
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.footer__logo
+		.footer__title			
+			max-width: 350px
+			text-align: center
+			.footer__text
+				font-family: 'Montserrat', sans-serif
+				font-weight: 500
+				font-size: 24px
+				line-height: 29px
+				color: #fff
+		.footer__list
+			display: flex
+			align-items: center
+			justify-content: space-between
+			.footer__item
+				margin-left: 40px
+				.footer__link
+					.footer__img
+						object-fit: cover
 						
-
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
-
 .example-grid
 	display: grid
 	grid-gap: $gutter
@@ -334,11 +415,6 @@ footer
 		display: block
 		> div
 			padding: $gutter/2 0
-	
-.example-img
-	width: 100%
 
-.parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
-	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
 
 
