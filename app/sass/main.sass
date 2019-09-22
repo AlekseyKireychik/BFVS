@@ -649,19 +649,19 @@ header
 					border-radius: 20px 0px 0px 20px
 					margin-bottom: 50px
 .guide
-	background-image: url(../img/_src/bgcontacts.png)
-	background-size: cover
-	background-position: bottom
+	background-image: url(../img/_src/historybg.png)
+	background-size: contain
+	background-position: top left
 	background-repeat: no-repeat	
 	padding-top: 86px
 	padding-bottom: 50px
 	.guide__content
+		display: grid
+		grid-gap: $gutter
+		grid-template-columns: repeat(2, 1fr)
 		padding-top: 60px
 		.guide__list
 			display: grid
-			grid-gap: $gutter
-			grid-template-columns: repeat(2, 1fr)   
-			grid-template-rows: auto 
 			.guide__item
 				align-self: start
 				background: #fff
