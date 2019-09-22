@@ -585,6 +585,46 @@ header
 			bottom: 11%
 			border-radius: 90px 0px 0px 90px
 			box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.5)
+.history
+	background-image: url(../img/_src/historybg.png)
+	background-size: contain
+	background-position: top
+	background-repeat: space
+	margin-top: 100px
+	.container
+		.borderbottom
+			padding-top: 50px
+			padding-bottom: 50px
+			position: relative
+			&:before
+				content: url(../img/_src/documentbordergorizont.png)
+				position: absolute
+				right: 0
+				bottom: 0
+		.row
+			align-items: start
+			.history__text
+				padding: 0
+			.history__left
+				text-align: center
+				.history__group
+					padding-top: 50px
+					img
+						box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.5)
+						border-radius: 10px
+						margin-bottom: 20px
+				.history__date
+					display: flex
+					flex-direction: column
+					justify-content: center
+					align-items: center					
+					span
+						font-family: 'Montserrat', sans-serif
+						font-weight: 700
+						font-size: 64px
+						line-height: 78px
+						color: $accent
+			.history__right
 .guide
 	background-image: url(../img/_src/bgcontacts.png)
 	background-size: cover
@@ -631,6 +671,7 @@ header
 							font-size: 24px
 							line-height: 29px
 							color: $text
+
 footer
 	background-color: $accent
 	padding-top: 50px
