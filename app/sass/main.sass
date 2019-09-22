@@ -367,9 +367,16 @@ header
 .gallery
 	background-image: url(../img/_src/galleryhomebg.png)
 	background-size: cover
-	background-position: center
+	background-position: top
 	background-repeat: no-repeat
-	padding: 100px 0 145px
+	padding: 100px 0
+
+.gallerypage
+	background-image: url(../img/_src/historybg.png)
+	background-size: contain
+	background-position: top left
+	background-repeat: repeat-y
+	padding: 100px 0 50px
 
 .container			
 	.title
@@ -385,62 +392,53 @@ header
 			border-bottom: 4px solid $accent
 			bottom: -2px
 			width: 132px
-
-.gallery__list	
+.gallery__content
 	display: grid
-	grid-gap: $gutter
-	grid-template-columns: 2fr 2fr
-	grid-template-rows: 2fr
-	padding: 50px 0 0
-	.gallery__item01
-		grid-column-start: 1	
-		grid-column-end: 3
-		// grid-row-start: 1
-		// grid-row-end: 2
-	.gallery__item02
-		grid-column-start: 1	
-		grid-column-end: 2
-		// grid-row-start: 2
-		// grid-row-end: 3
-	.gallery__item03
-		grid-column-start: 2	
-		grid-column-end: 3
-		// grid-row-start: 2
-		// grid-row-end: 3
-	.gallery__item04
-		grid-column-start: 3	
-		grid-column-end: 3
-	.gallery__item05
-		grid-column-start: 3	
-		grid-column-end: 3
-	.gallery__item06
-		grid-column-start: 3	
-		grid-column-end: 4
-	.gallery__item		
-		border-radius: 10px	
-		.gallery__link
-			display: block	
-			overflow: hidden
-			position: relative
-			.gallery__img					
-				background: rgba(0, 0, 0, 0.3)		
-				border-radius: 10px			
-			.gallery__title
-				position: absolute
-				bottom: 0
-				left: 0 
-				font-family: 'Montserrat', sans-serif
-				font-weight: 700
-				font-size: 14px
-				line-height: 17px
-				color: #fff
-				padding: 20px
-				opacity: 0
-				transition: .3s
-			&:hover
+	grid-column-gap: $gutter
+	grid-row-gap: $gutter / 2
+	grid-template-columns: 1fr 1fr
+	padding-top: 45px
+	.gallery__list	
+		display: grid
+		grid-gap: $gutter
+		grid-template-columns: repeat(2, 1fr)
+		.gallery__item01
+			grid-column: 1 / 3
+		.gallery__item02
+			grid-column: 1 / 2
+		.gallery__item03
+			grid-column: 2 / 3
+		.gallery__item04
+			grid-column: 1 / 2
+		.gallery__item05
+			grid-column: 2 / 3	
+		.gallery__item06
+			grid-column: 1 / 3
+		.gallery__item		
+			border-radius: 10px	
+			.gallery__link
+				display: block	
+				overflow: hidden
+				position: relative
+				.gallery__img					
+					background: rgba(0, 0, 0, 0.3)		
+					border-radius: 10px			
 				.gallery__title
-					opacity: 1
+					position: absolute
+					bottom: 0
+					left: 0 
+					font-family: 'Montserrat', sans-serif
+					font-weight: 700
+					font-size: 14px
+					line-height: 17px
+					color: #fff
+					padding: 20px
+					opacity: 0
 					transition: .3s
+				&:hover
+					.gallery__title
+						opacity: 1
+						transition: .3s
 .gallery__wrap
 	text-align: center
 	margin: 0 auto
@@ -536,16 +534,13 @@ header
 	background-size: cover
 	background-position: bottom
 	background-repeat: no-repeat	
-	padding-top: 84px
+	margin-top: 100px
 	.contacts__content
-		padding-top: 60px
-		position: relative
+		padding-top: 60px		
 		.contacts__left
 			display: flex
 			align-items: center
 			flex-direction: column
-			max-width: 540px
-			margin-right: auto
 			text-align: center	
 			padding-bottom: 65px		
 			.contacts__subtitle
@@ -578,13 +573,15 @@ header
 						color: $accent
 					.contacts__phone
 						padding-top: 35px		
-		img
-			position: absolute
-			transform: translate(-50%)
-			left: 81%
-			bottom: 11%
-			border-radius: 90px 0px 0px 90px
-			box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.5)
+		.contacts__right
+			position: relative
+			img
+				position: absolute
+				transform: translate(-80%)
+				left: 100%
+				bottom: 90px
+				border-radius: 90px 0px 0px 90px
+				box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.5)
 .history
 	background-image: url(../img/_src/historybg.png)
 	background-size: contain
@@ -625,6 +622,32 @@ header
 						line-height: 78px
 						color: $accent
 			.history__right
+
+.eventspage
+	background-image: url(../img/_src/historybg.png)
+	background-size: contain
+	background-position: left
+	background-repeat: repeat-y
+	margin-top: 100px
+	.container
+		.eventspage__content
+			align-items: start
+			padding-bottom: 0
+			.eventspage__left
+				padding: 0 10px 0 0
+				p 
+					text-indent: 20px			
+				.eventspage__date
+					font-weight: 700
+					font-size: 20px
+					line-height: 24px
+					color: rgba(0, 0, 0, 0.2)
+			.eventspage__right
+				.eventspage__img
+					object-fit: cover
+					box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.5)
+					border-radius: 20px 0px 0px 20px
+					margin-bottom: 50px
 .guide
 	background-image: url(../img/_src/bgcontacts.png)
 	background-size: cover
