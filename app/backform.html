@@ -57,133 +57,141 @@
 		</div>
 	</header>
 	<main>
-		<section class="eventshome">
+		<section class="applicationform">
 			<div class="container">
 				<div class="row">
 					<h2 class="title">Заявление на прием в БФВС</h2>
 				</div>
-				<form method="post" id="form-contact-us" novalidate>
+				<form method="post" id="form__application">
 					<div class="row">
-						<div class="col-lg-6">
-							<div class="form-group">
-								<label for="contactfamile" class="col-form-label">Фамилия<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactfamile" id="contactfamile" placeholder="Введите Вашу Фамилию" data-validation-error-msg="Пожалуйста, Введите Фамилию" data-validation="required">
+						<div class="applicationform__left col-12 col-lg-6">
+							<div class="applicationform__group">
+								<label for="contactfamile" class="applicationform__label">Фамилия<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactfamile" id="contactfamile" placeholder="Введите Вашу Фамилию" data-validation-error-msg="Пожалуйста, Введите Фамилию" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactname" class="col-form-label">Имя<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactname" id="contactname" placeholder="Введите Ваше Имя" data-validation-error-msg="Пожалуйста, Введите Имя" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactname" class="applicationform__label">Имя<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactname" id="contactname" placeholder="Введите Ваше Имя" data-validation-error-msg="Пожалуйста, Введите Имя" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactpatronymic" class="col-form-label">Отчество<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactpatronymic" id="contactpatronymic" placeholder="Введите Ваше Отчество" data-validation-error-msg="Пожалуйста, Введите Отчество" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactpatronymic" class="applicationform__label">Отчество<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactpatronymic" id="contactpatronymic" placeholder="Введите Ваше Отчество" data-validation-error-msg="Пожалуйста, Введите Отчество" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactfamilelat" class="col-form-label">Фамилия (латиницей)<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactfamilelat" id="contactfamilelat" placeholder="Введите Вашу Фамилию латиницей " data-validation-error-msg="Пожалуйста, Введите Фамилию латиницей " data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactfamilelat" class="applicationform__label">Фамилия (латиницей)<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactfamilelat" id="contactfamilelat" placeholder="Введите Вашу Фамилию латиницей " data-validation-error-msg="Пожалуйста, Введите Фамилию латиницей " data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactnamelat" class="col-form-label">Имя (латиницей)<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactnamelat" id="contactnamelat" placeholder="Введите Ваше Имя латиницей" data-validation-error-msg="Пожалуйста, Введите Имя латиницей" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactnamelat" class="applicationform__label">Имя (латиницей)<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactnamelat" id="contactnamelat" placeholder="Введите Ваше Имя латиницей" data-validation-error-msg="Пожалуйста, Введите Имя латиницей" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactname" class="col-form-label">Дата, год рождения<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactname" id="contactname" placeholder="" data-validation-error-msg="Пожалуйста, введите имя" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactyearbirth" class="applicationform__label">Дата, год рождения<span class="required-star">*</span></label>
+								<input type="date" class="applicationform__control" name="contactyearbirth" id="contactyearbirth" placeholder="" data-validation-error-msg="Пожалуйста, введите имя" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactplacebirth" class="col-form-label">Место рождения<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactplacebirth" id="contactplacebirth" placeholder="Введите Ваше место рождения" data-validation-error-msg="Пожалуйста, Введите Ваше место рожденияя" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactplacebirth" class="applicationform__label">Место рождения<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactplacebirth" id="contactplacebirth" placeholder="Введите Ваше место рождения" data-validation-error-msg="Пожалуйста, Введите Ваше место рожденияя" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactpass" class="col-form-label">Паспорт Серия/№<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactpass" id="contactpass" placeholder="Введите Вашу серию/№ паспорта" data-validation-error-msg="Пожалуйста, Введите Вашу серию/№ паспорта" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactpass" class="applicationform__label">Паспорт Серия/№<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactpass" id="contactpass" placeholder="Введите Вашу серию/№ паспорта" data-validation-error-msg="Пожалуйста, Введите Вашу серию/№ паспорта" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactname" class="col-form-label">Дата выдачи<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactname" id="contactname" placeholder="" data-validation-error-msg="Пожалуйста, введите имя" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactdateissue" class="applicationform__label">Дата выдачи<span class="required-star">*</span></label>
+								<input type="date" class="applicationform__control" name="contactdateissue" id="contactdateissue" placeholder="" data-validation-error-msg="Пожалуйста, введите имя" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactname" class="col-form-label">До<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactname" id="contactname" placeholder="" data-validation-error-msg="Пожалуйста, введите имя" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactvaliduntil" class="applicationform__label">До<span class="required-star">*</span></label>
+								<input type="date" class="applicationform__control" name="contactvaliduntil" id="contactvaliduntil" placeholder="" data-validation-error-msg="Пожалуйста, введите имя" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactpassportissued" class="col-form-label">Кем и где выдан<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactpassportissued" id="contactpassportissued" placeholder="Укажите кем и где был выдан вам паспорт" data-validation-error-msg="Пожалуйста, Укажите кем и где был выдан вам паспорт" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactpassportissued" class="applicationform__label">Кем и где выдан<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactpassportissued" id="contactpassportissued" placeholder="Укажите кем и где был выдан вам паспорт" data-validation-error-msg="Пожалуйста, Укажите кем и где был выдан вам паспорт" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactidnum" class="col-form-label">Идентификационный №<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactidnum" id="contactidnum" placeholder="Введите Ваш идентификационный №" data-validation-error-msg="Пожалуйста, Введите Ваш идентификационный №" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactidnum" class="applicationform__label">Идентификационный №<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactidnum" id="contactidnum" placeholder="Введите Ваш идентификационный №" data-validation-error-msg="Пожалуйста, Введите Ваш идентификационный №" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactnationality" class="col-form-label">Национальность<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactnationality" id="contactnationality" placeholder="Укажите Вашу национальность" data-validation-error-msg="Пожалуйста, Укажите Вашу национальность" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactnationality" class="applicationform__label">Национальность<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactnationality" id="contactnationality" placeholder="Укажите Вашу национальность" data-validation-error-msg="Пожалуйста, Укажите Вашу национальность" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactname" class="col-form-label">Пол<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactname" id="contactname" placeholder="" data-validation-error-msg="Пожалуйста, введите имя" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactgender" class="applicationform__label">Пол<span class="required-star">*</span></label>
+								<select name="contactgender" class="applicationform__select">
+									<option class="applicationform__control">Не выбран</option>
+									<option class="applicationform__control">Мужской</option>
+									<option class="applicationform__control">Женский</option>
+								</select>	
 							</div>
-							<div class="form-group">
-								<label for="contactaducation" class="col-form-label">Образование (когда, какое учебное заведение окончил)<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactaducation" id="contactaducation" placeholder="Укажите сведения о Вашем образовании" data-validation-error-msg="Пожалуйста, Укажите сведения о Вашем образовании" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactaducation" class="applicationform__label">Образование (когда, какое учебное заведение окончил)<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactaducation" id="contactaducation" placeholder="Укажите сведения о Вашем образовании" data-validation-error-msg="Пожалуйста, Укажите сведения о Вашем образовании" data-validation="required">
 							</div>
 						</div>
-						<div class="col-lg-6">
-							<div class="form-group">
-								<label for="contactinfo" class="col-form-label">Место работы/учебы/службы/должность<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactinfo" id="contactinfo" placeholder="Укажите Ваше место работы и должность" data-validation-error-msg="Пожалуйста, Укажите Ваше место работы и должность" data-validation="required">
+						<div class="applicationform__right col-12 col-lg-6">
+							<div class="applicationform__group">
+								<label for="contactinfo" class="applicationform__label">Место работы/учебы/службы/должность<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactinfo" id="contactinfo" placeholder="Укажите Ваше место работы и должность" data-validation-error-msg="Пожалуйста, Укажите Ваше место работы и должность" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactadress" class="col-form-label">Домашний адрес<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactadress" id="contactadress" placeholder="Укажите Ваш домашний адрес" data-validation-error-msg="Пожалуйста, Укажите Ваш домашний адрес" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactadress" class="applicationform__label">Домашний адрес<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactadress" id="contactadress" placeholder="Укажите Ваш домашний адрес" data-validation-error-msg="Пожалуйста, Укажите Ваш домашний адрес" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contacthometelephone" class="col-form-label">Домашний телефон<span class="required-star">*</span></label>
-								<input type="tel" class="form-control validate-numeric" name="contacthometelephone" id="contacthometelephone" placeholder="Введите Ваш номер домашнего телефона" data-validation-error-msg="Введите Ваш номер домашнего телефона" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contacthometelephone" class="applicationform__label">Домашний телефон<span class="required-star">*</span></label>
+								<input type="tel" class="applicationform__control validate-numeric" name="contacthometelephone" id="contacthometelephone" placeholder="Введите Ваш номер домашнего телефона" data-validation-error-msg="Введите Ваш номер домашнего телефона" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contacttelephone" class="col-form-label">Служебный телефон<span class="required-star">*</span></label>
-								<input type="tel" class="form-control validate-numeric" name="contacttelephone" id="contacttelephone" placeholder="Введите Ваш номер служебного телефона" data-validation-error-msg="Введите Ваш номер служебного телефона" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contacttelephone" class="applicationform__label">Служебный телефон<span class="required-star">*</span></label>
+								<input type="tel" class="applicationform__control validate-numeric" name="contacttelephone" id="contacttelephone" placeholder="Введите Ваш номер служебного телефона" data-validation-error-msg="Введите Ваш номер служебного телефона" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactsportrang" class="col-form-label">Спортивное звание<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactsportrang" id="contactsportrang" placeholder="Укажите Ваше спортивное звание" data-validation-error-msg="Пожалуйста, Укажите Ваше спортивное звание" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactsportrang" class="applicationform__label">Спортивное звание<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactsportrang" id="contactsportrang" placeholder="Укажите Ваше спортивное звание" data-validation-error-msg="Пожалуйста, Укажите Ваше спортивное звание" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactsportrang" class="col-form-label">Дата, год выполнения<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactsportrang" id="contactsportrang" placeholder="Укажите Ваше спортивное звание" data-validation-error-msg="Пожалуйста, Укажите Ваше спортивное звание" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactdategetting" class="applicationform__label">Дата, год выполнения<span class="required-star">*</span></label>
+								<input type="date" class="applicationform__control" name="contactdategetting" id="contactdategetting" placeholder="Укажите Ваше спортивное звание" data-validation-error-msg="Пожалуйста, Укажите Ваше спортивное звание" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactsportexperience" class="col-form-label">Стаж спортивной подготовки<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactsportexperience" id="contactsportexperience" placeholder="Введите Ваш стаж спортивной подготовки" data-validation-error-msg="Пожалуйста, Введите Ваш стаж спортивной подготовки" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactsportexperience" class="applicationform__label">Стаж спортивной подготовки<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactsportexperience" id="contactsportexperience" placeholder="Введите Ваш стаж спортивной подготовки" data-validation-error-msg="Пожалуйста, Введите Ваш стаж спортивной подготовки" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactsportclub" class="col-form-label">Клуб, ДСО, ведомство<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactsportclub" id="contactsportclub" placeholder="Введите Ваш клуб или ДСО или Ведомство" data-validation-error-msg="Пожалуйста, Введите Ваш клуб или ДСО или Ведомство" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactsportclub" class="applicationform__label">Клуб, ДСО, ведомство<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactsportclub" id="contactsportclub" placeholder="Введите Ваш клуб или ДСО или Ведомство" data-validation-error-msg="Пожалуйста, Введите Ваш клуб или ДСО или Ведомство" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contacttrainer" class="col-form-label">Личный тренер<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contacttrainer" id="contacttrainer" placeholder="Укажите Вашего личного тренера" data-validation-error-msg="Пожалуйста, Укажите Вашего личного тренера" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contacttrainer" class="applicationform__label">Личный тренер<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contacttrainer" id="contacttrainer" placeholder="Укажите Вашего личного тренера" data-validation-error-msg="Пожалуйста, Укажите Вашего личного тренера" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactheight" class="col-form-label">Рост<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactheight" id="contactheight" placeholder="Введите Ваш рост" data-validation-error-msg="Пожалуйста, Введите Ваш рост" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactheight" class="applicationform__label">Рост<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactheight" id="contactheight" placeholder="Введите Ваш рост" data-validation-error-msg="Пожалуйста, Введите Ваш рост" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactweight" class="col-form-label">Вес<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactweight" id="contactweightg" placeholder="Введите Ваш вес" data-validation-error-msg="Пожалуйста, Введите Ваш вес" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactweight" class="applicationform__label">Вес<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactweight" id="contactweightg" placeholder="Введите Ваш вес" data-validation-error-msg="Пожалуйста, Введите Ваш вес" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactclothingsize" class="col-form-label">Размер одежды<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactclothingsize" id="contactclothingsize" placeholder="Введите Ваш размер одежды" data-validation-error-msg="Пожалуйста, Введите Ваш размер одежды" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactclothingsize" class="applicationform__label">Размер одежды<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactclothingsize" id="contactclothingsize" placeholder="Введите Ваш размер одежды" data-validation-error-msg="Пожалуйста, Введите Ваш размер одежды" data-validation="required">
 							</div>
-							<div class="form-group">
-								<label for="contactshoesize" class="col-form-label">Размер обуви<span class="required-star">*</span></label>
-								<input type="text" class="form-control" name="contactshoesize" id="contactshoesize" placeholder="Введите Ваш размер обуви" data-validation-error-msg="Пожалуйста, Введите Ваш размер обуви" data-validation="required">
+							<div class="applicationform__group">
+								<label for="contactshoesize" class="applicationform__label">Размер обуви<span class="required-star">*</span></label>
+								<input type="text" class="applicationform__control" name="contactshoesize" id="contactshoesize" placeholder="Введите Ваш размер обуви" data-validation-error-msg="Пожалуйста, Введите Ваш размер обуви" data-validation="required">
 							</div>
 		
 							<input type="hidden" name="culturecode">
-							<input type="hidden" name="url">              
-							<div class="form-group bottom-box">
-								<button id="btn-contact-us" class="btn-contact-us">Отправить заявку</button>
+							<input type="hidden" name="url">
+							<div class="form-check">  
+								<input class="form__check-input" data-validation="required" type="checkbox" id="check1">  
+								<label class="form__check-label" for="check1">Я согласен с условиями правил<span class="required-star">*</span></label>  
+							</div>              
+							<div class="bottom-box">
+								<button id="form__btn" class="form__btn">Отправить заявку</button>
 								<img src="img/_src/logoform.png" alt="Белорусская федерация велосипедного спорта">
 							</div>
 						</div>
