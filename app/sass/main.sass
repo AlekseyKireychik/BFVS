@@ -496,6 +496,8 @@ header
 	background-position: center
 	background-repeat: no-repeat
 	padding-bottom: 50px
+	+media-breakpoint-down(md)
+		background-position: top left
 	.container	
 		margin-top: 96px	
 
@@ -504,12 +506,18 @@ header
 		padding: 50px 0 0
 		margin-bottom: 0
 		display: grid
-		grid-template-columns: 1fr 1fr 1fr
-		grid-template-rows: 1fr 1fr 1fr
+		grid-template-columns: repeat(3, 1fr) 
+		grid-template-rows: repeat(3, 1fr) 
+		+media-breakpoint-down(md)
+			grid-template-columns: repeat(2, 1fr)
+		+media-breakpoint-down(sm)
+			grid-template-columns: repeat(1, 1fr)
 		.documents__item
 			padding: 50px 20px
 			text-align: center
 			align-self: center
+			+media-breakpoint-down(sm)
+				padding: 20px 20px
 			.documents__content	
 				font-family: 'Montserrat', sans-serif
 				font-weight: 500
@@ -524,6 +532,10 @@ header
 						position: absolute
 						right: -100%
 						bottom: -30px
+						+media-breakpoint-down(lg)
+							content: url(../img/_src/documentbordergorizont2.png)
+						+media-breakpoint-down(md)
+							display: none
 			&:nth-child(5)
 					position: relative
 					&:before
@@ -531,6 +543,10 @@ header
 						position: absolute
 						right: -100%
 						bottom: -40px
+						+media-breakpoint-down(lg)
+							content: url(../img/_src/documentbordergorizont2.png)
+						+media-breakpoint-down(md)
+							display: none
 			&:nth-child(4)
 					position: relative
 					&:before
@@ -538,6 +554,8 @@ header
 						position: absolute
 						right: 0
 						bottom: -160%
+						+media-breakpoint-down(md)
+							display: none
 			&:nth-child(5)
 					position: relative
 					&:after
@@ -545,6 +563,8 @@ header
 						position: absolute
 						right: 0
 						bottom: -160%
+						+media-breakpoint-down(md)
+							display: none
 .aboutus
 	background-image: url(../img/_src/bgaboutus.png)
 	background-size: cover
