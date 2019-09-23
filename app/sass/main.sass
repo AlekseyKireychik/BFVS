@@ -3,7 +3,7 @@
 @import libs
 
 ::placeholder
-	color: #666
+	color: rgba(0, 0, 0, 0.5)
 
 ::selection
 	background-color: $accent
@@ -14,6 +14,8 @@ ul
 
 li
 	list-style: none
+img
+	width: 100%
 
 input, textarea
 	outline: none
@@ -31,14 +33,15 @@ body
 	overflow-x: hidden
 	color: $text
 
-.container
-	max-width: 1196px
+.container	
 	padding:
 		right: $gutter/2
 		left: $gutter/2
 	margin:
 		left: auto
 		right: auto
+	+media-breakpoint-up(xl)
+		max-width: 1196px
 .content
 	font-family: 'Montserrat', sans-serif
 	font-weight: 500
@@ -57,6 +60,9 @@ body
 		font-size: 48px
 		line-height: 59px
 		position: relative
+		+media-breakpoint-up(md)
+			font-size: 42px
+			line-height: 52px
 		&:before
 			content: ''
 			position: absolute
@@ -79,6 +85,9 @@ header
 			align-items: center
 			padding: 30px 0 14px
 			.header__logo
+				img
+				+media-breakpoint-down(md)
+					max-width: 310px
 			.header__languages
 				position: relative								
 				.header__list
@@ -99,6 +108,8 @@ header
 							background: $accent
 							border: none
 							padding: 5px 38px
+							+media-breakpoint-down(md)
+								padding: 0px 20px
 						&:nth-child(even)
 							position: relative
 							&:before
@@ -152,8 +163,13 @@ header
 				display: flex
 				justify-content: space-between
 				align-items: center
+				+media-breakpoint-down(lg)
+					flex-direction: column					
 				.header__item
 					margin: 20px 0
+					+media-breakpoint-down(lg)
+						margin: 10px 0
+						display: none
 					.header__link
 						font-family: 'Montserrat', sans-serif
 						font-weight: 700
@@ -234,9 +250,12 @@ header
 	margin: 50px 0 0
 	.news__list
 		display: grid
-		grid-gap: $gutter
-		grid-template-columns: 1fr 1fr 1fr
-		grid-template-rows: 2fr
+		grid-gap: $gutter / 2
+		grid-template-columns: repeat(3, 1fr)
+		+media-breakpoint-down(lg)
+			grid-template-columns: repeat(2, 1fr)
+		+media-breakpoint-down(sm)
+			grid-template-columns: repeat(1, 1fr)
 		.news__item
 			.news__link
 				position: relative
@@ -274,7 +293,7 @@ header
 				color: $accent
 
 .eventshome
-	padding: 100px 0 135px
+	padding: 50px 0 135px
 	background-image: url(../img/_src/evntshomebg.png)
 	background-size: cover
 	background-position: left 10% center
@@ -385,6 +404,9 @@ header
 		font-size: 48px
 		line-height: 59px
 		position: relative
+		+media-breakpoint-down(sm)
+			font-size: 42px
+			line-height: 52px
 		&:before
 			content: ''
 			position: absolute
@@ -709,6 +731,8 @@ header
 			.row
 				> div
 					padding: 45px
+					+media-breakpoint-down(sm)
+						padding: 45px 15px
 					.applicationform__group 
 						display: flex
 						flex-direction: column
@@ -763,6 +787,9 @@ header
 						display: flex
 						justify-content: space-between
 						align-items: center
+						+media-breakpoint-down(lg)
+							flex-direction: column
+							align-items: center
 						button.form__btn
 							font-family: 'Montserrat', sans-serif
 							font-weight: 700
@@ -774,45 +801,69 @@ header
 							border-radius: 90px
 							border: none
 							padding: 22px 42px
+							+media-breakpoint-down(lg)
+								margin-bottom: 20px
 						img
 							object-fit: cover
+							width: inherit
 				.applicationform__left
-					
+					+media-breakpoint-down(lg)
+						margin-bottom: 62px
+					+media-breakpoint-down(md)
+						margin-bottom: 0
+						padding-bottom: 0					
 				.applicationform__right
+					+media-breakpoint-down(md)
+						padding-top: 0
+						padding-bottom: 30px
 
 footer
 	background-color: $accent
 	padding-top: 50px
 	padding-bottom: 112px
+	+media-breakpoint-down(lg)
+		padding-bottom: 70px
 	.partners
 		.title
 			color: #fff
 		.partners__brand
 			padding: 50px 20px 0
-			.partners__list
+			+media-breakpoint-down(lg)
+				justify-content: space-around
+			.partners__list	
+				+media-breakpoint-down(lg)
+					display: flex
+					flex-wrap: wrap
+					justify-content: space-around
+					margin-bottom: 0
 				.partners__item
-					margin-bottom: 40px					
+					margin-bottom: 40px								
 					.partners__img
 						border-radius: 10px
-						height: 65px
 				&:nth-child(2)
 					position: relative
 					&:before
 						content: url(../img/_src/bordergradient.png)
 						position: absolute
-						left: -25px
+						left: -6%
 						top: 0px
+						+media-breakpoint-down(lg)
+							display: none
 					&:after
 						content: url(../img/_src/bordergradient.png)
 						position: absolute
-						right: -25px
+						right: -6%
 						top: 0px
+						+media-breakpoint-down(lg)
+							display: none
 	.footer__nav
 		.footer__list
 			display: flex
 			align-items: center
 			justify-content: space-between
 			padding: 50px 0 30px
+			+media-breakpoint-down(lg)
+				flex-wrap: wrap
 			.footer__item				
 				.footer__link
 					font-family: 'Montserrat', sans-serif
@@ -826,7 +877,17 @@ footer
 		display: flex
 		align-items: center
 		justify-content: space-between
+		+media-breakpoint-down(lg)
+			flex-wrap: wrap
+		+media-breakpoint-down(md)
+			justify-content: center
 		.footer__logo
+			+media-breakpoint-down(lg)
+				flex-basis: 50%
+			+media-breakpoint-down(md)
+				margin-bottom: 20px	
+			img
+				width: inherit
 		.footer__title			
 			max-width: 350px
 			text-align: center
@@ -840,8 +901,12 @@ footer
 			display: flex
 			align-items: center
 			justify-content: space-between
+			+media-breakpoint-down(lg)
+				margin: 30px auto 0
 			.footer__item
 				margin-left: 40px
+				+media-breakpoint-down(lg)
+				margin: 0 20px
 				.footer__link
 					.footer__img
 						object-fit: cover

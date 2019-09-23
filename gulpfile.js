@@ -19,7 +19,7 @@ gulp.task('browser-sync', function() {
 		},
 		notify: false,
 		// online: false, // Work offline without internet connection
-		// tunnel: true, tunnel: 'projectname', // Demonstration page: http://projectname.localtunnel.me
+		// tunnel: true, tunnel: 'bfvs', // Demonstration page: http://bfvs.localtunnel.me
 	})
 });
 function bsReload(done) { browserSync.reload(); done(); };
@@ -42,6 +42,9 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
+		// 'node_modules/bootstrap/dist/js/dist/carousel.js',
+		// 'node_modules/popper.js/dist/popper.min.js',
+		// 'node_modules/bootstrap/dist/js/bootstrap.min.js',
 		'app/js/_lazy.js', // JS library plug-in example
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		])
