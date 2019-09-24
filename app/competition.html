@@ -29,7 +29,7 @@
 				</div>
 				<div class="header__languages">
 					<ul class="header__list">
-						<li class="header__item"><button class="header__btn" name="search"><img src="img/@2x/searchico.png" alt="search"></button></li>
+						<li class="header__item"><button class="header__btn search__btn" name="search"><img src="img/@2x/searchico.png" alt="search"></button></li>
 						<li class="header__item"><button class="header__btn" name="rus">Рус</button></li>
 						<li class="header__item"><button class="header__btn" name="eng">Eng</button></li>
 					</ul>
@@ -43,6 +43,12 @@
 					</div>
 				</div>
 			</div>
+			<div class="burger-menu">
+				<a href="#" class="burger-menu__button">
+					<span class="burger-menu__lines"></span>
+				</a>
+			</div>
+			<div class="burger-menu__overlay"></div>
 			<nav class="header__nav">
 				<ul class="header__list">
 					<li class="header__item"><a href="./aboutus.html" class="header__link">БФВС</a></li>
@@ -54,21 +60,81 @@
 					<li class="header__item"><a href="./news.html" class="header__link">Новости</a></li>
 					<li class="header__item"><a href="./backform.html" class="header__link">Заявление на прием в БФВС</a></li>
 				</ul>
-			</nav>	
+			</nav>		
 		</div>
 	</header>
 	<main>
-		<section class="competitionpage">
+		<section class="calendarpage">
 			<div class="container">
 				<div class="row">
 					<h2 class="title">Соревнования</h2>
 				</div>
-				<div class="competition">
-					<ul class="news__list">
-						<li class="news__item"><a class="news__link" href="#"><img class="news__img" src="img/_src/image-news01.jpg" alt="Евгений Королек выиграл бронзовую медаль II Европейских игр"><span class="news__text">Евгений Королек выиграл бронзовую медаль II Европейских игр</span></a></li>
-						<li class="news__item"><a class="news__link" href="#"><img class="news__img" src="img/_src/image-news02.jpg" alt="Золото! Василий Кириенко - чемпион II Европейских игр"><span class="news__text">Золото! Василий Кириенко - чемпион II Европейских игр</span></a></li>
-						<li class="news__item"><a class="news__link" href="#"><img class="news__img" src="img/_src/image-news03.jpg" alt="Татьяна Шаракова завоевала вторую медаль II Европейских игр: на этот раз - Золото!"><span class="news__text" >Татьяна Шаракова завоевала вторую медаль II Европейских игр: на этот раз - Золото!</span></a></li>
+				<div class="row calendarpage__nav">
+					<ul class="calendar__list">
+						<li class="calendar__item"><a class="calendar__link" href="#"><img class="calendar__img" src="img/_src/left.png" alt="left"></a></li>
+						<li class="calendar__item"><a class="calendar__link" href="#"><img class="calendar__img" src="img/_src/right.png" alt="right"></a></li>
+						<li class="calendar__item"><a class="calendar__link" href="#"><img class="calendar__img" src="img/_src/calendar.png" alt="calendar"></a></li>
 					</ul>
+					<h4 class="calendar__title">Август 2019</h4>
+					<ul class="calendar__list">
+						<li class="calendar__item"><a class="calendar__link" href="#">Месяц</a></li>
+						<li class="calendar__item"><a class="calendar__link" href="#">Неделя</a></li>
+						<li class="calendar__item"><a class="calendar__link" href="#">День</a></li>
+						<li class="calendar__item"><a class="calendar__link" href="#">Список</a></li>
+					</ul>
+				</div>
+				<div class="calendar">
+					<div class="calendar__date">
+						<div class="calendar__day">пн</div>
+						<div class="calendar__day">вт</div>
+						<div class="calendar__day">ср</div>
+						<div class="calendar__day">чт</div>
+						<div class="calendar__day">пт</div>
+						<div class="calendar__day">сб</div>
+						<div class="calendar__day brnone">вс</div>
+						<div class="calendar__number">28</div>
+						<div class="calendar__number">29</div>
+						<div class="calendar__number">30</div>
+						<div class="calendar__number">1</div>
+						<div class="calendar__number">2</div>
+						<div class="calendar__number">3</div>
+						<div class="calendar__number brnone">4</div>
+						<div class="calendar__number">5</div>
+						<div class="calendar__number">6</div>
+						<div class="calendar__number">7</div>
+						<div class="calendar__number">8</div>
+						<div class="calendar__number">9</div>
+						<div class="calendar__number">10</div>
+						<div class="calendar__number brnone">11</div>
+						<div class="calendar__number">12</div>
+						<div class="calendar__number">13</div>
+						<div class="calendar__number">14</div>
+						<div class="calendar__number">15</div>
+						<div class="calendar__number">16</div>
+						<div class="calendar__number">17</div>
+						<div class="calendar__number brnone">18</div>
+						<div class="calendar__number">19</div>
+						<div class="calendar__number">20</div>
+						<div class="calendar__number">21</div>
+						<div class="calendar__number">22</div>
+						<div class="calendar__number">23</div>
+						<div class="calendar__number">24</div>
+						<div class="calendar__number brnone">25</div>
+						<div class="calendar__number">26</div>
+						<div class="calendar__number">27</div>
+						<div class="calendar__number">28</div>
+						<div class="calendar__number">29</div>
+						<div class="calendar__number">30</div>
+						<div class="calendar__number">31</div>
+						<div class="calendar__number brnone">1</div>
+						<div class="calendar__number bbnone">2</div>
+						<div class="calendar__number bbnone">3</div>
+						<div class="calendar__number bbnone">4</div>
+						<div class="calendar__number bbnone">5</div>
+						<div class="calendar__number bbnone">6</div>
+						<div class="calendar__number bbnone">7</div>
+						<div class="calendar__number bbnone brnone">8</div> 
+					</div>
 				</div>
 			</div>
 		</section>
@@ -107,14 +173,14 @@
 		</section>
 		<nav class="footer__nav container">
 			<ul class="footer__list">
-				<li class="footer__item"><a class="footer__link" href="../aboutus.html">БФВС</a></li>
-				<li class="footer__item"><a class="footer__link" href="">История</a></li>
-				<li class="footer__item"><a class="footer__link" href="../guide.html">Руководство</a></li>
+				<li class="footer__item"><a class="footer__link" href="./aboutus.html">БФВС</a></li>
+				<li class="footer__item"><a class="footer__link" href="./histiry.html">История</a></li>
+				<li class="footer__item"><a class="footer__link" href="./guide.html">Руководство</a></li>
 				<li class="footer__item"><a class="footer__link" href="">Исполком</a></li>
-				<li class="footer__item"><a class="footer__link" href="../documents.html">Документы</a></li>
-				<li class="footer__item"><a class="footer__link" href="">Контакты</a></li>
-				<li class="footer__item"><a class="footer__link" href="../news.html">Новости</a></li>
-				<li class="footer__item"><a class="footer__link" href="">Соревнования</a></li>
+				<li class="footer__item"><a class="footer__link" href="./documents.html">Документы</a></li>
+				<li class="footer__item"><a class="footer__link" href="./contacts.html">Контакты</a></li>
+				<li class="footer__item"><a class="footer__link" href="./news.html">Новости</a></li>
+				<li class="footer__item"><a class="footer__link" href="./competition.html">Соревнования</a></li>
 			</ul>
 		</nav>
 		<div class="footer__bottom container">
