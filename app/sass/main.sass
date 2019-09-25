@@ -120,6 +120,7 @@ header
 								padding: 0px 20px
 							+media-breakpoint-down(xs)
 								padding: 0px 5px
+								line-height: 29px
 						&:nth-child(even)
 							position: relative
 							&:before
@@ -135,7 +136,7 @@ header
 								left: 0
 								border-right: 2px solid #fff
 								bottom: 6px
-								height: 32px					
+								height: 32px			
 				.search__formwrap
 					position: absolute 
 					bottom: -50px
@@ -143,6 +144,8 @@ header
 					border-radius: 10px
 					display: none
 					z-index: 99
+					+media-breakpoint-down(xs)
+						left: -35px
 					.search__container
 						width: 100%
 						.search__form

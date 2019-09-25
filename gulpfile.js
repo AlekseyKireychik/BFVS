@@ -19,7 +19,7 @@ gulp.task('browser-sync', function() {
 		},
 		notify: false,
 		// online: false, // Work offline without internet connection
-		// tunnel: true, tunnel: 'bfvs', // Demonstration page: http://bfvs.localtunnel.me
+		// tunnel: true, tunnel: 'mainbfvs', // Demonstration page: http://mainbfvs.localtunnel.me
 	})
 });
 function bsReload(done) { browserSync.reload(); done(); };
