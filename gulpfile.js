@@ -42,6 +42,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
+		'node_modules/lightbox2/dist/js/lightbox.min.js',
 		// 'node_modules/bootstrap/dist/js/dist/carousel.js',
 		// 'node_modules/popper.js/dist/popper.min.js',
 		// 'node_modules/bootstrap/dist/js/bootstrap.min.js',
