@@ -92,7 +92,11 @@ header
 				+media-breakpoint-down(md)
 					max-width: 310px
 			.header__languages
-				position: relative								
+				position: relative	
+				+media-breakpoint-down(md)	
+					margin-right: 55px
+				+media-breakpoint-down(xs)	
+					margin-right: 46px								
 				.header__list
 					display: flex
 					justify-content: space-between
@@ -113,6 +117,8 @@ header
 							padding: 5px 38px
 							+media-breakpoint-down(md)
 								padding: 0px 20px
+							+media-breakpoint-down(xs)
+								padding: 0px 5px
 						&:nth-child(even)
 							position: relative
 							&:before
@@ -162,7 +168,9 @@ header
 		.burger-menu
 			position: absolute
 			top: 90px
-			right: 10px    		
+			right: 10px  
+			+media-breakpoint-down(md)
+				top: 30px
 			.burger-menu__button
 				display: none
 				position: relative	
@@ -173,9 +181,7 @@ header
 				cursor: pointer
 				z-index: 30
 				+media-breakpoint-down(lg)
-						display: block
-				&:hover
-					filter: brightness(0.7)
+					display: block				
 				.burger-menu__lines
 					position: absolute
 					width: 30px
@@ -218,8 +224,8 @@ header
 		.header__nav
 			z-index: 30
 			+media-breakpoint-down(lg)
-				position: relative	
-				display: none
+				position: relative
+				border-bottom: 4px solid $accent
 			.innerpages
 				border-bottom: 4px solid $accent
 			.header__list
@@ -233,7 +239,8 @@ header
 					height: 0
 					background-color: #f2f2f2
 					border-bottom: 4px solid $accent
-					padding: 30px 0					
+					padding: 30px 0	
+					display: none				
 				.header__item
 					margin: 20px 0
 					+media-breakpoint-down(lg)
@@ -275,6 +282,8 @@ header
 				.carousel-img
 					width: 100%
 					object-fit: cover
+					+media-breakpoint-down(md)
+						min-height: 450px
 				.container
 					position: relative
 					.carousel-caption
@@ -287,6 +296,9 @@ header
 						left: auto
 						right: 0
 						bottom: 20px
+						+media-breakpoint-down(md)
+							bottom: 70px
+							right: auto
 						.carousel-title
 							font-family: 'Montserrat', sans-serif
 							font-weight: 700
@@ -366,14 +378,21 @@ header
 	background-size: cover
 	background-position: left 10% center
 	background-repeat: no-repeat
+	+media-breakpoint-down(lg)
+	padding: 50px 0 50px
 
 .events
 	.events__textlist
-		display: flex
-		justify-content: space-between
-		align-items: center
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-gap: $gutter
+		text-align: center
 		padding-top: 50px
 		margin-bottom: 50px	
+		+media-breakpoint-down(lg)
+			grid-template-columns: repeat(2, 1fr)
+		+media-breakpoint-down(sm)
+			grid-template-columns: 1fr
 		.events__textitem	
 			box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25)
 			border-radius: 10px			
@@ -385,8 +404,8 @@ header
 				justify-content: center
 				align-items: center	
 				min-height: 160px
-				min-width: 284px
 				max-width: 284px
+				margin: 0 auto
 				text-decoration: none				
 				.events__textcontent
 					font-family: 'Montserrat', sans-serif
@@ -396,9 +415,13 @@ header
 					text-align: center
 					color: $text
 	.events__list
-		display: flex
-		justify-content: space-between
-		align-items: center
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-gap: $gutter
+		+media-breakpoint-down(md)
+			grid-template-columns: repeat(2, 1fr)
+		+media-breakpoint-down(sm)
+			grid-template-columns: 1fr
 		.events__item					
 			.events__link
 				overflow: hidden
@@ -434,6 +457,8 @@ header
 			box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25)
 			border-radius: 20px
 			padding: 25px
+			+media-breakpoint-down(md)
+				right: 15px
 			.infoplatform__title
 				font-family: 'Montserrat', sans-serif
 				font-weight: 700
@@ -457,6 +482,9 @@ header
 	background-position: top
 	background-repeat: no-repeat
 	padding: 100px 0
+	+media-breakpoint-down(sm)
+		padding: 50px 0
+
 
 .gallerypage
 	background-image: url(../img/_src/historybg.png)
@@ -464,6 +492,8 @@ header
 	background-position: top left
 	background-repeat: repeat-y
 	padding: 100px 0 50px
+	+media-breakpoint-down(sm)
+		padding-top: 50px
 
 .container			
 	.title
@@ -475,6 +505,9 @@ header
 		+media-breakpoint-down(sm)
 			font-size: 42px
 			line-height: 52px
+		+media-breakpoint-down(xs)
+				font-size: 32px
+				line-height: 36px
 		&:before
 			content: ''
 			position: absolute
@@ -486,8 +519,10 @@ header
 	display: grid
 	grid-column-gap: $gutter
 	grid-row-gap: $gutter / 2
-	grid-template-columns: 1fr 1fr
+	grid-template-columns: repeat(2, 1fr)
 	padding-top: 45px
+	+media-breakpoint-down(md)
+		grid-template-columns: 1fr
 	.gallery__list	
 		display: grid
 		grid-gap: $gutter
@@ -566,6 +601,7 @@ header
 	padding-bottom: 50px
 	+media-breakpoint-down(md)
 		background-position: top left
+
 	.container	
 		margin-top: 96px	
 
@@ -639,6 +675,8 @@ header
 	background-position: bottom left
 	background-repeat: no-repeat
 	margin-top: 96px
+	+media-breakpoint-down(sm)
+		margin-top: 50px
 
 .contacts
 	background-image: url(../img/_src/bgcontacts.png)
@@ -646,8 +684,16 @@ header
 	background-position: bottom
 	background-repeat: no-repeat	
 	margin-top: 100px
+	+media-breakpoint-down(sm)
+		margin-top: 50px
 	.contacts__content
-		padding-top: 60px		
+		padding-top: 60px	
+		display: grid
+		grid-template-columns: repeat(2, 1fr)	
+		align-items: flex-start
+		grid-gap: $gutter
+		+media-breakpoint-down(lg)
+			grid-template-columns: 1fr
 		.contacts__left
 			display: flex
 			align-items: center
@@ -682,39 +728,71 @@ header
 						line-height: 29px
 						text-decoration: none
 						color: $accent
+						word-break: break-word
+  						word-wrap: break-word
 					.contacts__phone
 						padding-top: 35px		
 		.contacts__right
 			position: relative
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			text-align: center	
+			+media-breakpoint-down(lg)
+				padding-bottom: 25px
 			img
-				position: absolute
-				transform: translate(-80%)
-				left: 100%
-				bottom: 90px
+				// position: absolute
+				// transform: translate(-80%)
+				// left: 100%
+				// bottom: 90px
 				border-radius: 90px 0px 0px 90px
 				box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.5)
+				+media-breakpoint-down(lg)
+					border-radius: 90px 
 .history
 	background-image: url(../img/_src/historybg.png)
 	background-size: contain
 	background-position: top
 	background-repeat: space
 	margin-top: 100px
+	+media-breakpoint-down(sm)
+		margin-top: 50px
 	.container
 		.borderbottom
 			padding-top: 50px
 			padding-bottom: 50px
 			position: relative
+			+media-breakpoint-down(xs)
+				padding-top: 15px
+				padding-bottom: 15px
 			&:before
 				content: url(../img/_src/documentbordergorizont.png)
 				position: absolute
 				right: 0
 				bottom: 0
+			+media-breakpoint-down(lg)
+				&:before
+					content: url(../img/_src/documentbordergorizontMobile.png)
+					right: 20%
+			+media-breakpoint-down(md)
+				&:before
+					content: url(../img/_src/documentbordergorizontMobile.png)
+					right: 0
+			+media-breakpoint-down(xs)
+				&:before
+					display: none
+
 		.row
 			align-items: start
 			.history__text
 				padding: 0
 			.history__left
 				text-align: center
+				padding-right: 40px
+				+media-breakpoint-down(lg)
+					padding-right: 20px
+				+media-breakpoint-down(md)
+					padding-right: 10px
 				.history__group
 					padding-top: 50px
 					img
@@ -733,6 +811,11 @@ header
 						line-height: 78px
 						color: $accent
 			.history__right
+				padding-left: 40px
+				+media-breakpoint-down(lg)
+					padding-left: 20px
+				+media-breakpoint-down(md)
+					padding-left: 10px
 
 .eventspage
 	background-image: url(../img/_src/historybg.png)
@@ -740,12 +823,18 @@ header
 	background-position: left
 	background-repeat: repeat-y
 	margin-top: 100px
+	+media-breakpoint-down(sm)
+		margin-top: 50px
 	.container
 		.eventspage__content
 			align-items: start
-			padding-bottom: 0
+			padding-bottom: 50px
+			+media-breakpoint-down(lg)
+				padding-bottom: 25px
 			.eventspage__left
 				padding: 0 10px 0 0
+				+media-breakpoint-down(lg)
+					padding-bottom: 50px
 				p 
 					text-indent: 20px			
 				.eventspage__date
@@ -759,6 +848,8 @@ header
 					box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.5)
 					border-radius: 20px 0px 0px 20px
 					margin-bottom: 50px
+					+media-breakpoint-down(lg)
+						border-radius: 20px
 .guide
 	background-image: url(../img/_src/historybg.png)
 	background-size: contain
@@ -766,11 +857,16 @@ header
 	background-repeat: no-repeat	
 	padding-top: 86px
 	padding-bottom: 50px
+	+media-breakpoint-down(sm)
+		padding-top: 50px
 	.guide__content
 		display: grid
 		grid-gap: $gutter
 		grid-template-columns: repeat(2, 1fr)
 		padding-top: 60px
+		+media-breakpoint-down(lg)
+			grid-template-columns: 1fr
+			grid-gap: $gutter / 2
 		.guide__list
 			display: grid
 			grid-row-gap: $gutter
@@ -781,6 +877,8 @@ header
 				border-radius: 20px
 				padding: 20px 30px
 				text-align: center
+				+media-breakpoint-down(xs)
+					padding: 20px 5px
 				.guide__subtitle
 					font-family: 'Montserrat', sans-serif
 					font-weight: 700
@@ -810,6 +908,8 @@ header
 	background-repeat: no-repeat
 	margin-top: 96px
 	padding-bottom: 50px
+	+media-breakpoint-down(sm)
+		margin-top: 50px
 	.container
 		#form__application
 			background: #FFF
@@ -912,15 +1012,24 @@ header
 	background-size: cover
 	background-position: bottom
 	background-repeat: no-repeat
+	+media-breakpoint-down(sm)
+		padding-top: 50px	
 	.container	
 		.calendarpage__nav
-			margin: 100px 0 50px		
+			margin: 100px 0 50px
+			+media-breakpoint-down(sm)	
+				margin: 50px 0 25px	
 		.calendar__title
 			font-family: 'Montserrat', sans-serif
 			font-weight: 500
 			font-size: 36px
 			line-height: 36px
 			color: #000
+			+media-breakpoint-down(sm)
+				margin-bottom: 20px
+			+media-breakpoint-down(xs)
+				font-size: 32px
+				line-height: 36px
 		.calendar__list
 			display: flex
 			justify-content: space-between
@@ -928,8 +1037,14 @@ header
 			background: $accent
 			border-radius: 10px
 			margin: 0
+			+media-breakpoint-down(lg)
+				margin-bottom: 20px
 			.calendar__item
 				padding: 10px 40px
+				+media-breakpoint-down(sm)
+					padding: 10px 20px
+				+media-breakpoint-down(xs)
+					padding: 10px 5px
 				.calendar__link
 					font-family: 'Montserrat', sans-serif
 					font-weight: 700
@@ -940,7 +1055,6 @@ header
 					border: none
 					padding: 5px 5px
 					text-decoration: none
-					+media-breakpoint-down(md)
 					.calendar__img
 						width: inherit
 				&:nth-child(even)
@@ -988,6 +1102,12 @@ header
 					padding: 15px 0
 					border-right: 2px solid $accent
 					border-bottom: 2px solid $accent
+					+media-breakpoint-down(lg)
+						font-size: 36px
+						line-height: 48px
+					+media-breakpoint-down(xs)
+						font-size: 24px
+						line-height: 32px
 				.brnone
 					border-right: none
 				.calendar__number
@@ -998,6 +1118,15 @@ header
 					color: rgba(0, 0, 0, 0.3)
 					border-bottom: 2px solid $accent
 					border-right: 2px solid $accent
+					+media-breakpoint-down(lg)
+						font-size: 52px
+						line-height: 72px
+					+media-breakpoint-down(sm)
+						font-size: 42px
+						line-height: 54px
+					+media-breakpoint-down(xs)
+						font-size: 28px
+						line-height: 42px
 				.brnone
 					border-right: none
 				.bbnone
