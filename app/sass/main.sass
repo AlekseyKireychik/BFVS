@@ -387,7 +387,7 @@ header
 	padding: 50px 0 135px
 	background-image: url(../img/_src/evntshomebg.png)
 	background-size: cover
-	background-position: left 10% center
+	background-position: left 0% center
 	background-repeat: no-repeat
 	+media-breakpoint-down(lg)
 		padding: 50px 0 50px
@@ -456,6 +456,7 @@ header
 	background-size: cover
 	background-position: center
 	background-repeat: no-repeat
+	margin-bottom: 35px
 	.container
 		min-height: 550px
 		position: relative
@@ -493,9 +494,9 @@ header
 	background-size: cover
 	background-position: top
 	background-repeat: no-repeat
-	padding: 100px 0
+	padding: 65px 0
 	+media-breakpoint-down(sm)
-		padding: 50px 0
+		padding: 25px 0
 
 .gallerypage
 	background-image: url(../img/_src/historybg.png)
@@ -616,14 +617,17 @@ header
 .documents__home
 	background-image: url(../img/_src/Documentsbg.png)
 	background-size: cover
-	background-position: center
+	background-position: left 2% center
 	background-repeat: no-repeat
+	margin-top: 35px
 	padding-bottom: 50px
+	+media-breakpoint-down(lg)
+		background-position: left 30% center
 
 .documents__page
-	background-image: url(../img/_src/evntshomebg.png)
+	background-image: url(../img/_src/Documentspagebg.png)
 	background-size: cover
-	background-position: center
+	background-position: left center
 	background-repeat: no-repeat
 	padding-bottom: 50px
 	+media-breakpoint-down(md)
@@ -701,7 +705,7 @@ header
 .aboutus
 	background-image: url(../img/_src/bgaboutus.png)
 	background-size: cover
-	background-position: bottom left
+	background-position: left bottom 0%
 	background-repeat: no-repeat
 	margin-top: 96px
 	+media-breakpoint-down(sm)
@@ -710,9 +714,10 @@ header
 .contacts
 	background-image: url(../img/_src/bgcontacts.png)
 	background-size: cover
-	background-position: bottom
+	background-position: left 25% bottom
 	background-repeat: no-repeat
 	margin-top: 96px
+	overflow: hidden
 	+media-breakpoint-down(sm)
 		margin-top: 50px
 	.contacts__content
@@ -771,15 +776,17 @@ header
 			text-align: center
 			+media-breakpoint-down(lg)
 				padding-bottom: 25px
+				justify-content: center
 			img
-				// position: absolute
-				// transform: translate(-80%)
-				// left: 100%
-				// bottom: 90px
+				width: inherit
+				position: absolute
+				top: 10px
 				border-radius: 90px 0px 0px 90px
 				box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.5)
 				+media-breakpoint-down(lg)
 					border-radius: 90px
+					position: relative
+					width: 100%
 .history
 	background-image: url(../img/_src/historybg.png)
 	background-size: contain
@@ -788,6 +795,8 @@ header
 	margin-top: 96px
 	+media-breakpoint-down(sm)
 		margin-top: 50px
+	.content
+		padding-bottom: 30px	
 	.container
 		.borderbottom
 			padding-top: 50px
@@ -795,7 +804,7 @@ header
 			position: relative
 			+media-breakpoint-down(xs)
 				padding-top: 15px
-				padding-bottom: 15px
+				padding-bottom: 15px			
 			&:before
 				content: url(../img/_src/documentbordergorizont.png)
 				position: absolute
@@ -810,6 +819,15 @@ header
 					content: url(../img/_src/documentbordergorizontMobile.png)
 					right: 10%
 			+media-breakpoint-down(xs)
+				&:before
+					display: none
+			&:last-child
+				&:before
+					content: url(../img/_src/documentbordergorizont.png)
+					position: absolute
+					right: 0
+					bottom: 30px
+			+media-breakpoint-down(md)
 				&:before
 					display: none
 
@@ -832,6 +850,7 @@ header
 						box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.5)
 						border-radius: 10px
 						margin-bottom: 20px
+						max-width: 400px
 				.history__date
 					display: flex
 					flex-direction: column
@@ -844,7 +863,7 @@ header
 						line-height: 78px
 						color: $accent
 			.history__right
-				padding-left: 40px
+				padding-left: 10px
 				+media-breakpoint-down(lg)
 					padding-left: 20px
 				+media-breakpoint-down(md)
@@ -959,9 +978,9 @@ header
 			margin-top: 60px
 			.row
 				> div
-				padding: 45px
-				+media-breakpoint-down(sm)
-					padding: 45px 15px
+					padding: 45px
+					+media-breakpoint-down(sm)
+						padding: 45px 15px
 					.applicationform__group
 						display: flex
 						flex-direction: column
