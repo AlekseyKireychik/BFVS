@@ -70,7 +70,7 @@ body
 			border-bottom: 4px solid $accent
 			bottom: -2px
 			width: 132px
-			
+
 	.link
 		font-family: 'Montserrat', sans-serif
 		font-weight: 500
@@ -122,8 +122,8 @@ header
 							+media-breakpoint-down(xs)
 								padding: 0px 5px
 								line-height: 29px
-							&.search__btn		
-								+media-breakpoint-down(xs)						
+							&.search__btn
+								+media-breakpoint-down(xs)
 									padding: 0 12px
 						&:nth-child(even)
 							position: relative
@@ -140,7 +140,7 @@ header
 								left: 0
 								border-right: 2px solid #fff
 								bottom: 6px
-								height: 32px							
+								height: 32px
 				.search__formwrap
 					position: absolute
 					bottom: -50px
@@ -335,6 +335,8 @@ header
 	background-size: cover
 	background-position: bottom
 	background-repeat: no-repeat
+	+media-breakpoint-down(sm)
+		padding: 66px 0 0
 .news
 	margin: 50px 0 0
 	.news__list
@@ -525,7 +527,7 @@ header
 			bottom: -2px
 			width: 132px
 			+media-breakpoint-down(xs)
-				bottom: -6px
+				bottom: -8px
 				width: 75px
 .gallery__content
 	display: grid
@@ -629,6 +631,8 @@ header
 
 	.container
 		margin-top: 96px
+		+media-breakpoint-down(sm)
+			margin-top: 66px
 
 .documents
 	.documents__list
@@ -755,6 +759,8 @@ header
 						color: $accent
 						word-break: break-word
 						word-wrap: break-word
+						+media-breakpoint-down(sm)
+							font-size: 16px
 					.contacts__phone
 						padding-top: 35px
 		.contacts__right
