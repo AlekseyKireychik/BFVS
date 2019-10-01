@@ -25,7 +25,7 @@
 		"jquery": "^3.4.1"
 	},
 	"dependencies": {
-		"dependencies": "^2.11.1",
+		"lightbox2": "^2.11.1",
 		"popper.js": "^1.15.0"
 	}
 }

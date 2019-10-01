@@ -33,13 +33,13 @@ body
 	overflow-x: hidden
 	color: $text
 
-.container	
+.container
 	padding:
-		right: $gutter/2
-		left: $gutter/2
+	right: $gutter/2
+	left: $gutter/2
 	margin:
-		left: auto
-		right: auto
+	left: auto
+	right: auto
 	+media-breakpoint-up(xl)
 		max-width: 1196px
 .content
@@ -68,8 +68,9 @@ body
 			position: absolute
 			left: 0
 			border-bottom: 4px solid $accent
-			bottom: 0
+			bottom: -2px
 			width: 132px
+			
 	.link
 		font-family: 'Montserrat', sans-serif
 		font-weight: 500
@@ -92,11 +93,11 @@ header
 				+media-breakpoint-down(md)
 					max-width: 310px
 			.header__languages
-				position: relative	
-				+media-breakpoint-down(md)	
+				position: relative
+				+media-breakpoint-down(md)
 					margin-right: 55px
-				+media-breakpoint-down(xs)	
-					margin-right: 46px								
+				+media-breakpoint-down(xs)
+					margin-right: 46px
 				.header__list
 					display: flex
 					justify-content: space-between
@@ -121,6 +122,9 @@ header
 							+media-breakpoint-down(xs)
 								padding: 0px 5px
 								line-height: 29px
+							&.search__btn		
+								+media-breakpoint-down(xs)						
+									padding: 0 12px
 						&:nth-child(even)
 							position: relative
 							&:before
@@ -136,16 +140,16 @@ header
 								left: 0
 								border-right: 2px solid #fff
 								bottom: 6px
-								height: 32px			
+								height: 32px							
 				.search__formwrap
-					position: absolute 
+					position: absolute
 					bottom: -50px
 					left: 0
 					border-radius: 10px
 					display: none
 					z-index: 99
 					+media-breakpoint-down(xs)
-						left: -35px
+						left: -65%
 					.search__container
 						width: 100%
 						.search__form
@@ -163,12 +167,12 @@ header
 		.burger-menu
 			position: absolute
 			top: 90px
-			right: 10px  
+			right: 10px
 			+media-breakpoint-down(md)
 				top: 30px
 			.burger-menu__button
 				display: none
-				position: relative	
+				position: relative
 				width: 45px
 				height: 45px
 				border-radius: 10px
@@ -176,7 +180,7 @@ header
 				cursor: pointer
 				z-index: 1000
 				+media-breakpoint-down(lg)
-					display: block				
+					display: block
 				.burger-menu__lines
 					position: absolute
 					width: 30px
@@ -207,13 +211,13 @@ header
 						transform: rotate(45deg)
 					&:after
 						top: 0
-						transform: rotate(-45deg)			
-		// .burger-menu__overlay				
+						transform: rotate(-45deg)
+		// .burger-menu__overlay
 		// 	display: none
 		// 	position: fixed
 		// 	width: 100vw
 		// 	height: 100vh
-		// 	top: 0 
+		// 	top: 0
 		// 	left: 0
 		// 	z-index: 990
 		// 	&.is-active
@@ -221,35 +225,34 @@ header
 		.header__nav
 			position: relative
 			z-index: 30
-			+media-breakpoint-down(lg)
-				border-bottom: 4px solid $accent
+			border-bottom: 4px solid $accent
 			&.homepages
 				border-bottom: none
 			.header__list-nav
 				display: flex
 				justify-content: space-between
-				align-items: center				
+				align-items: center
 				&.is-active
 					height: auto
 					display: flex
 					transition: .3s
 					z-index: 1000
 				+media-breakpoint-down(lg)
-					flex-direction: column	
+					flex-direction: column
 					position: absolute
 					top: 4px
 					left: 0
-					right: 0						
-					width: 100%					
+					right: 0
+					width: 100%
 					background-color: #f2f2f2
 					border-bottom: 4px solid $accent
-					padding: 30px 0	
+					padding: 30px 0
 					height: 0
-					display: none										
+					display: none
 				.header__item
 					margin: 20px 0
 					+media-breakpoint-down(lg)
-						margin: 5px 0						
+						margin: 5px 0
 					.header__link
 						font-family: 'Montserrat', sans-serif
 						font-weight: 700
@@ -262,7 +265,7 @@ header
 						transition: .3s
 						&:hover
 							color: $accent
-							transition: .3s				
+							transition: .3s
 
 .carousel__baner
 	.carousel
@@ -272,7 +275,7 @@ header
 			right: auto
 			bottom: 0
 			top: auto
-			li 
+			li
 				width: 25px
 				height: 25px
 				margin: 5px
@@ -327,7 +330,7 @@ header
 	padding: 100px 0 42px
 
 .newspage
-	padding: 86px 0 0
+	padding: 96px 0 0
 	background-image: url(../img/_src/bgcontacts.png)
 	background-size: cover
 	background-position: bottom
@@ -346,11 +349,11 @@ header
 			.news__link
 				position: relative
 				display: block
-				overflow: hidden					
+				overflow: hidden
 				.news__text
 					position: absolute
 					bottom: 0
-					left: 0 
+					left: 0
 					font-family: 'Montserrat', sans-serif
 					font-weight: 700
 					font-size: 16px
@@ -385,7 +388,7 @@ header
 	background-position: left 10% center
 	background-repeat: no-repeat
 	+media-breakpoint-down(lg)
-	padding: 50px 0 50px
+		padding: 50px 0 50px
 
 .events
 	.events__textlist
@@ -394,25 +397,25 @@ header
 		grid-gap: $gutter
 		text-align: center
 		padding-top: 50px
-		margin-bottom: 50px	
+		margin-bottom: 50px
 		+media-breakpoint-down(lg)
 			grid-template-columns: repeat(2, 1fr)
 		+media-breakpoint-down(sm)
 			grid-template-columns: 1fr
-		.events__textitem	
+		.events__textitem
 			box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25)
-			border-radius: 10px			
+			border-radius: 10px
 			background-color: #fff
-			.events__textlink				
+			.events__textlink
 				position: relative
 				overflow: hidden
 				display: flex
 				justify-content: center
-				align-items: center	
+				align-items: center
 				min-height: 160px
 				max-width: 284px
 				margin: 0 auto
-				text-decoration: none				
+				text-decoration: none
 				.events__textcontent
 					font-family: 'Montserrat', sans-serif
 					font-weight: 700
@@ -434,7 +437,7 @@ header
 				position: relative
 				display: flex
 				justify-content: center
-				align-items: center					
+				align-items: center
 				.events__text
 					position: absolute
 					padding: 20px
@@ -451,20 +454,21 @@ header
 	background-size: cover
 	background-position: center
 	background-repeat: no-repeat
-	min-height: 550px	
-	position: relative
-	.container				
+	.container
+		min-height: 550px
+		position: relative
 		.infoplatform__caption
 			max-width: 500px
 			position: absolute
 			bottom: 20px
-			right: 122px
+			right: 10px
 			background: #fff
 			box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25)
 			border-radius: 20px
 			padding: 25px
-			+media-breakpoint-down(md)
-				right: 15px
+			+media-breakpoint-down(sm)
+				right: 5px
+				left: 5px
 			.infoplatform__title
 				font-family: 'Montserrat', sans-serif
 				font-weight: 700
@@ -475,11 +479,11 @@ header
 				font-weight: 500
 				font-size: 18px
 				line-height: 22px
-			.infoplatform__link	
+			.infoplatform__link
 				font-family: 'Montserrat', sans-serif
 				font-weight: 500
 				font-size: 18px
-				line-height: 22px	
+				line-height: 22px
 				color: $accent
 
 .gallery
@@ -491,17 +495,16 @@ header
 	+media-breakpoint-down(sm)
 		padding: 50px 0
 
-
 .gallerypage
 	background-image: url(../img/_src/historybg.png)
 	background-size: contain
 	background-position: top left
 	background-repeat: repeat-y
-	padding: 100px 0 50px
+	padding: 96px 0 50px
 	+media-breakpoint-down(sm)
 		padding-top: 50px
 
-.container			
+.container
 	.title
 		font-family: 'Montserrat', sans-serif
 		font-weight: 700
@@ -512,8 +515,8 @@ header
 			font-size: 42px
 			line-height: 52px
 		+media-breakpoint-down(xs)
-				font-size: 32px
-				line-height: 36px
+			font-size: 32px
+			line-height: 36px
 		&:before
 			content: ''
 			position: absolute
@@ -521,6 +524,9 @@ header
 			border-bottom: 4px solid $accent
 			bottom: -2px
 			width: 132px
+			+media-breakpoint-down(xs)
+				bottom: -6px
+				width: 75px
 .gallery__content
 	display: grid
 	grid-column-gap: $gutter
@@ -529,7 +535,7 @@ header
 	padding-top: 45px
 	+media-breakpoint-down(md)
 		grid-template-columns: 1fr
-	.gallery__list	
+	.gallery__list
 		display: grid
 		grid-gap: $gutter
 		grid-template-columns: repeat(2, 1fr)
@@ -542,13 +548,13 @@ header
 		.gallery__item04
 			grid-column: 1 / 2
 		.gallery__item05
-			grid-column: 2 / 3	
+			grid-column: 2 / 3
 		.gallery__item06
 			grid-column: 1 / 3
-		.gallery__item		
-			border-radius: 10px				
+		.gallery__item
+			border-radius: 10px
 			.gallery__link
-				display: block	
+				display: block
 				overflow: hidden
 				position: relative
 				&:before
@@ -559,18 +565,18 @@ header
 					bottom: 0
 					left: 0
 					background: rgba(0, 0, 0, 0.3)
-					border-radius: 10px	
+					border-radius: 10px
 					opacity: 0
 					transition: .3s
 				&:hover:before
 					opacity: 1
 					transition: .3s
-				.gallery__img	
-					border-radius: 10px			
+				.gallery__img
+					border-radius: 10px
 				.gallery__title
 					position: absolute
 					bottom: 0
-					left: 0 
+					left: 0
 					font-family: 'Montserrat', sans-serif
 					font-weight: 700
 					font-size: 14px
@@ -585,7 +591,7 @@ header
 						transition: .3s
 .gallery__wrap
 	text-align: center
-	margin: 0 auto
+	margin: 40px auto 0
 	.gallery__more
 		font-family: 'Montserrat', sans-serif
 		font-weight: 500
@@ -610,7 +616,7 @@ header
 	background-size: cover
 	background-position: center
 	background-repeat: no-repeat
-	padding-bottom: 50px	
+	padding-bottom: 50px
 
 .documents__page
 	background-image: url(../img/_src/evntshomebg.png)
@@ -621,16 +627,16 @@ header
 	+media-breakpoint-down(md)
 		background-position: top left
 
-	.container	
-		margin-top: 96px	
+	.container
+		margin-top: 96px
 
-.documents	
+.documents
 	.documents__list
 		padding: 50px 0 0
 		margin-bottom: 0
 		display: grid
-		grid-template-columns: repeat(3, 1fr) 
-		grid-template-rows: repeat(3, 1fr) 
+		grid-template-columns: repeat(3, 1fr)
+		grid-template-rows: repeat(3, 1fr)
 		+media-breakpoint-down(md)
 			grid-template-columns: repeat(2, 1fr)
 		+media-breakpoint-down(sm)
@@ -641,7 +647,7 @@ header
 			align-self: center
 			+media-breakpoint-down(sm)
 				padding: 20px 20px
-			.documents__content	
+			.documents__content
 				font-family: 'Montserrat', sans-serif
 				font-weight: 500
 				font-size: 24px
@@ -649,45 +655,45 @@ header
 				text-decoration: none
 				color: $text
 			&:nth-child(2)
-					position: relative
-					&:before
-						content: url(../img/_src/documentbordergorizont.png)
-						position: absolute
-						right: -100%
-						bottom: -30px
-						+media-breakpoint-down(lg)
-							content: url(../img/_src/documentbordergorizont2.png)
+				position: relative
+				&:before
+					content: url(../img/_src/documentbordergorizont.png)
+					position: absolute
+					right: -100%
+					bottom: -30px
+					+media-breakpoint-down(lg)
+						content: url(../img/_src/documentbordergorizont2.png)
 						+media-breakpoint-down(md)
 							display: none
 			&:nth-child(5)
-					position: relative
-					&:before
-						content: url(../img/_src/documentbordergorizont.png)
-						position: absolute
-						right: -100%
-						bottom: -40px
-						+media-breakpoint-down(lg)
-							content: url(../img/_src/documentbordergorizont2.png)
+				position: relative
+				&:before
+					content: url(../img/_src/documentbordergorizont.png)
+					position: absolute
+					right: -100%
+					bottom: -40px
+					+media-breakpoint-down(lg)
+						content: url(../img/_src/documentbordergorizont2.png)
 						+media-breakpoint-down(md)
 							display: none
 			&:nth-child(4)
-					position: relative
-					&:before
-						content: url(../img/_src/documentbordervertical.png)
-						position: absolute
-						right: 0
-						bottom: -160%
-						+media-breakpoint-down(md)
-							display: none
+				position: relative
+				&:before
+					content: url(../img/_src/documentbordervertical.png)
+					position: absolute
+					right: 0
+					bottom: -160%
+					+media-breakpoint-down(md)
+						display: none
 			&:nth-child(5)
-					position: relative
-					&:after
-						content: url(../img/_src/documentbordervertical.png)
-						position: absolute
-						right: 0
-						bottom: -160%
-						+media-breakpoint-down(md)
-							display: none
+				position: relative
+				&:after
+					content: url(../img/_src/documentbordervertical.png)
+					position: absolute
+					right: 0
+					bottom: -160%
+					+media-breakpoint-down(md)
+						display: none
 .aboutus
 	background-image: url(../img/_src/bgaboutus.png)
 	background-size: cover
@@ -701,14 +707,14 @@ header
 	background-image: url(../img/_src/bgcontacts.png)
 	background-size: cover
 	background-position: bottom
-	background-repeat: no-repeat	
-	margin-top: 100px
+	background-repeat: no-repeat
+	margin-top: 96px
 	+media-breakpoint-down(sm)
 		margin-top: 50px
 	.contacts__content
-		padding-top: 60px	
+		padding-top: 60px
 		display: grid
-		grid-template-columns: repeat(2, 1fr)	
+		grid-template-columns: repeat(2, 1fr)
 		align-items: flex-start
 		grid-gap: $gutter
 		+media-breakpoint-down(lg)
@@ -717,8 +723,8 @@ header
 			display: flex
 			align-items: center
 			flex-direction: column
-			text-align: center	
-			padding-bottom: 65px		
+			text-align: center
+			padding-bottom: 65px
 			.contacts__subtitle
 				font-family: 'Montserrat', sans-serif
 				font-weight: 700
@@ -748,15 +754,15 @@ header
 						text-decoration: none
 						color: $accent
 						word-break: break-word
-  						word-wrap: break-word
+						word-wrap: break-word
 					.contacts__phone
-						padding-top: 35px		
+						padding-top: 35px
 		.contacts__right
 			position: relative
 			display: flex
 			align-items: center
 			justify-content: flex-start
-			text-align: center	
+			text-align: center
 			+media-breakpoint-down(lg)
 				padding-bottom: 25px
 			img
@@ -767,13 +773,13 @@ header
 				border-radius: 90px 0px 0px 90px
 				box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.5)
 				+media-breakpoint-down(lg)
-					border-radius: 90px 
+					border-radius: 90px
 .history
 	background-image: url(../img/_src/historybg.png)
 	background-size: contain
 	background-position: top
 	background-repeat: space
-	margin-top: 100px
+	margin-top: 96px
 	+media-breakpoint-down(sm)
 		margin-top: 50px
 	.container
@@ -824,7 +830,7 @@ header
 					display: flex
 					flex-direction: column
 					justify-content: center
-					align-items: center					
+					align-items: center
 					span
 						font-family: 'Montserrat', sans-serif
 						font-weight: 700
@@ -843,7 +849,7 @@ header
 	background-size: contain
 	background-position: left
 	background-repeat: repeat-y
-	margin-top: 100px
+	margin-top: 96px
 	+media-breakpoint-down(sm)
 		margin-top: 50px
 	.container
@@ -856,8 +862,8 @@ header
 				padding: 0 10px 0 0
 				+media-breakpoint-down(lg)
 					padding-bottom: 50px
-				p 
-					text-indent: 20px			
+				p
+					text-indent: 20px
 				.eventspage__date
 					font-weight: 700
 					font-size: 20px
@@ -875,9 +881,9 @@ header
 	background-image: url(../img/_src/historybg.png)
 	background-size: contain
 	background-position: top left
-	background-repeat: no-repeat	
-	padding-top: 86px
-	padding-bottom: 50px
+	background-repeat: no-repeat
+	padding-top: 96px
+	padding-bottom: 40px
 	+media-breakpoint-down(sm)
 		padding-top: 50px
 	.guide__content
@@ -887,7 +893,7 @@ header
 		padding-top: 60px
 		+media-breakpoint-down(lg)
 			grid-template-columns: 1fr
-			grid-gap: $gutter / 2
+			grid-gap: $gutter / 4
 		.guide__list
 			display: grid
 			grid-row-gap: $gutter
@@ -905,7 +911,7 @@ header
 					font-weight: 700
 					font-size: 24px
 					line-height: 29px
-					color: $accent					
+					color: $accent
 				.guide__sublist
 					padding-top: 15px
 					.guide__subitem
@@ -921,6 +927,14 @@ header
 							font-size: 24px
 							line-height: 29px
 							color: $text
+				&.item01
+					margin-bottom: -80px
+					+media-breakpoint-down(lg)
+						margin-bottom: 0px
+				&.item03
+					margin-bottom: 70px
+					+media-breakpoint-down(lg)
+						margin-bottom: 0px
 
 .applicationform
 	background-image: url(../img/_src/evntshomebg.png)
@@ -939,10 +953,10 @@ header
 			margin-top: 60px
 			.row
 				> div
-					padding: 45px
-					+media-breakpoint-down(sm)
-						padding: 45px 15px
-					.applicationform__group 
+				padding: 45px
+				+media-breakpoint-down(sm)
+					padding: 45px 15px
+					.applicationform__group
 						display: flex
 						flex-direction: column
 						justify-content: flex-start
@@ -974,7 +988,7 @@ header
 						.form__check-input
 							background: #F0F0F5
 							border: 2px solid $accent
-						input[type="checkbox"] 
+						input[type="checkbox"]
 							display: inline-block
 							width: auto
 							margin-top: 5px
@@ -1020,26 +1034,26 @@ header
 						margin-bottom: 62px
 					+media-breakpoint-down(md)
 						margin-bottom: 0
-						padding-bottom: 0					
+						padding-bottom: 0
 				.applicationform__right
 					+media-breakpoint-down(md)
 						padding-top: 0
 						padding-bottom: 30px
 
 .calendarpage
-	padding-top: 100px	
+	padding-top: 96px
 	padding-bottom: 50px
 	background-image: url(../img/_src/bgcontacts.png)
 	background-size: cover
 	background-position: bottom
 	background-repeat: no-repeat
 	+media-breakpoint-down(sm)
-		padding-top: 50px	
-	.container	
+		padding-top: 50px
+	.container
 		.calendarpage__nav
 			margin: 100px 0 50px
-			+media-breakpoint-down(sm)	
-				margin: 50px 0 25px	
+			+media-breakpoint-down(sm)
+				margin: 50px 0 25px
 		.calendar__title
 			font-family: 'Montserrat', sans-serif
 			font-weight: 500
@@ -1094,9 +1108,9 @@ header
 						border-right: 2px solid #fff
 						bottom: 6px
 						height: 32px
-				&:last-child 
+				&:last-child
 					&:before
-						content: ''	
+						content: ''
 						border-right: none
 		.calendar
 			width: 100%
@@ -1113,13 +1127,13 @@ header
 				div
 					display: flex
 					justify-content: center
-					align-items: center	
+					align-items: center
 				.calendar__day
 					font-family: 'Montserrat', sans-serif
 					font-weight: 700
 					font-size: 48px
 					line-height: 59px
-					color: #000			
+					color: #000
 					padding: 15px 0
 					border-right: 2px solid $accent
 					border-bottom: 2px solid $accent
@@ -1152,7 +1166,7 @@ header
 					border-right: none
 				.bbnone
 					border-bottom: none
-	
+
 footer
 	background-color: $accent
 	padding-top: 50px
@@ -1162,18 +1176,24 @@ footer
 	.partners
 		.title
 			color: #fff
+			&:before
+				bottom: -5px
+				border-bottom: 4px solid #fff
+				+media-breakpoint-down(xs)
+					bottom: -8px
+					width: 75px
 		.partners__brand
 			padding: 50px 20px 0
 			+media-breakpoint-down(lg)
 				justify-content: space-around
-			.partners__list	
+			.partners__list
 				+media-breakpoint-down(lg)
 					display: flex
 					flex-wrap: wrap
 					justify-content: space-around
 					margin-bottom: 0
 				.partners__item
-					margin-bottom: 40px								
+					margin-bottom: 40px
 					.partners__img
 						border-radius: 10px
 				&:nth-child(2)
@@ -1200,7 +1220,7 @@ footer
 			padding: 50px 0 30px
 			+media-breakpoint-down(lg)
 				flex-wrap: wrap
-			.footer__item				
+			.footer__item
 				.footer__link
 					font-family: 'Montserrat', sans-serif
 					font-weight: 500
@@ -1221,10 +1241,10 @@ footer
 			+media-breakpoint-down(lg)
 				flex-basis: 50%
 			+media-breakpoint-down(md)
-				margin-bottom: 20px	
+				margin-bottom: 20px
 			img
 				width: inherit
-		.footer__title			
+		.footer__title
 			max-width: 350px
 			text-align: center
 			.footer__text
@@ -1242,24 +1262,21 @@ footer
 			.footer__item
 				margin-left: 40px
 				+media-breakpoint-down(lg)
-				margin: 0 20px
+					margin: 0 20px
 				.footer__link
 					.footer__img
 						object-fit: cover
-						
+
 .example-grid
 	display: grid
 	grid-gap: $gutter
 	grid-template-columns: 1fr 1fr
 	grid-template-areas: "left right"
 	> div:first-child
-		grid-area: left
+	grid-area: left
 	> div:last-child
-		grid-area: right
+	grid-area: right
 	+media-breakpoint-down(xs)
 		display: block
 		> div
-			padding: $gutter/2 0
-
-
-
+		padding: $gutter/2 0
