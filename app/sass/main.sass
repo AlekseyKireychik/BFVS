@@ -212,16 +212,6 @@ header
 					&:after
 						top: 0
 						transform: rotate(-45deg)
-		// .burger-menu__overlay
-		// 	display: none
-		// 	position: fixed
-		// 	width: 100vw
-		// 	height: 100vh
-		// 	top: 0
-		// 	left: 0
-		// 	z-index: 990
-		// 	&.is-active
-		// 		display: block
 		.header__nav
 			position: relative
 			z-index: 30
@@ -334,10 +324,13 @@ header
 	.news__list
 		display: grid
 		grid-gap: $gutter / 2
+		-ms-grid-columns: 1fr 1fr 1fr
 		grid-template-columns: repeat(3, 1fr)
 		+media-breakpoint-down(lg)
+			-ms-grid-columns: 1fr 1fr
 			grid-template-columns: repeat(2, 1fr)
 		+media-breakpoint-down(sm)
+			-ms-grid-columns: 1fr
 			grid-template-columns: repeat(1, 1fr)
 		.news__item
 			.news__link
@@ -402,14 +395,17 @@ header
 .events
 	.events__textlist
 		display: grid
+		-ms-grid-columns: 1fr 1fr 1fr 1fr
 		grid-template-columns: repeat(4, 1fr)
 		grid-gap: $gutter
 		text-align: center
 		padding-top: 50px
 		margin-bottom: 50px
 		+media-breakpoint-down(lg)
+			-ms-grid-columns: 1fr 1fr
 			grid-template-columns: repeat(2, 1fr)
 		+media-breakpoint-down(sm)
+			-ms-grid-columns: 1fr
 			grid-template-columns: 1fr
 		.events__textitem
 			box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25)
@@ -803,7 +799,7 @@ header
 	+media-breakpoint-down(sm)
 		margin-top: 50px
 	.content
-		padding-bottom: 30px	
+		padding-bottom: 30px
 	.container
 		.borderbottom
 			padding-top: 50px
@@ -811,7 +807,7 @@ header
 			position: relative
 			+media-breakpoint-down(xs)
 				padding-top: 15px
-				padding-bottom: 15px			
+				padding-bottom: 15px
 			&:before
 				content: url(../img/_src/documentbordergorizont.png)
 				position: absolute
@@ -985,9 +981,9 @@ header
 			margin-top: 60px
 			.row
 				> div
-					padding: 45px
-					+media-breakpoint-down(sm)
-						padding: 45px 15px
+				padding: 45px
+				+media-breakpoint-down(sm)
+					padding: 45px 15px
 					.applicationform__group
 						display: flex
 						flex-direction: column
