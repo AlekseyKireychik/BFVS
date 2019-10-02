@@ -256,6 +256,9 @@ header
 						&:hover
 							color: $accent
 							transition: .3s
+						&.current
+							color: $accent
+							transition: .3s
 
 .carousel__baner
 	.carousel
@@ -981,9 +984,9 @@ header
 			margin-top: 60px
 			.row
 				> div
-				padding: 45px
-				+media-breakpoint-down(sm)
-					padding: 45px 15px
+					padding: 45px
+					+media-breakpoint-down(sm)
+						padding: 45px 15px
 					.applicationform__group
 						display: flex
 						flex-direction: column
