@@ -3,7 +3,7 @@ var gulp = require("gulp"),
   browserSync = require("browser-sync"),
   concat = require("gulp-concat"),
   uglify = require("gulp-uglify-es").default,
-  cleancss = require("gulp-clean-css"),
+  // cleancss = require("gulp-clean-css"),
   autoprefixer = require("gulp-autoprefixer"),
   rsync = require("gulp-rsync"),
   newer = require("gulp-newer"),
@@ -29,19 +29,21 @@ function bsReload(done) {
 
 // Custom Styles
 gulp.task("styles", function() {
-  return gulp
-    .src("app/sass/**/*.sass")
-    .pipe(sass({ outputStyle: "expanded" }))
-    .pipe(concat("styles.min.css"))
-    .pipe(
-      autoprefixer({
-        grid: true,
-        overrideBrowserslist: ["last 10 versions"]
-      })
-    )
-    .pipe(cleancss({ level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
-    .pipe(gulp.dest("app/css"))
-    .pipe(browserSync.stream());
+  return (
+    gulp
+      .src("app/sass/**/*.sass")
+      .pipe(sass({ outputStyle: "expanded" }))
+      .pipe(concat("styles.min.css"))
+      .pipe(
+        autoprefixer({
+          grid: true,
+          overrideBrowserslist: ["last 10 versions"]
+        })
+      )
+      // .pipe(cleancss({ level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
+      .pipe(gulp.dest("app/css"))
+      .pipe(browserSync.stream())
+  );
 });
 
 // Scripts & JS Libraries

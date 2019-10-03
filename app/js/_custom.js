@@ -1,18 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
-  $(function() {
-    var location = window.location.href;
-    console.log(location);
-    var cur_url = location.split("/").pop();
-    console.log(cur_url);
+document.addEventListener("DOMContentLoaded", () => {
+  // is-active menu link
 
-    $(".header__list-nav a").each(function() {
-      var link = $(this).attr("href");
-
-      if (cur_url == link) {
-        $(this).addClass("current");
-      }
-    });
+  let location = window.location.href;
+  let url_value = location.split("/").pop();
+  $(".header__list-nav a").each(function() {
+    let link = $(this)
+      .attr("href")
+      .split("/")
+      .pop();
+    if (url_value == link) {
+      $(this).addClass("is-active");
+    }
   });
+
   //searc-btn
 
   let btn_search = document.querySelector(".search__btn");

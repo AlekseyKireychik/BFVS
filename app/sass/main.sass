@@ -1,6 +1,7 @@
 @import vars
 @import fonts
 @import libs
+@import media
 
 ::placeholder
 	color: rgba(0, 0, 0, 0.5)
@@ -253,12 +254,13 @@ header
 						text-decoration: none
 						padding: 0 20px
 						transition: .3s
+						&.is-active
+							color: $accent
+							transition: .3s
 						&:hover
 							color: $accent
 							transition: .3s
-						&.current
-							color: $accent
-							transition: .3s
+							
 
 .carousel__baner
 	.carousel
