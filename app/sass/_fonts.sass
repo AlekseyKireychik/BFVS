@@ -1,5 +1,4 @@
 // font-weight helper:
-
 // 100 Extra Light or Ultra Light;
 // 200 Light or Thin; 300 Book or Demi;
 // 400 Regular or Normal;
@@ -8,64 +7,62 @@
 // 700 Bold;
 // 800 Black or Extra Bold or Heavy;
 // 900 Extra Black or Fat or Ultra Black
-
-
 @mixin font($f-name, $f-style, $f-weight, $f-url, $f-format)
 	@font-face
-		font-family: $f-name
-		font-style: $f-style
-		font-weight: $f-weight
-		src: url($f-url) format($f-format)
+	font-family: $f-name
+	font-style: $f-style
+	font-weight: $f-weight
+	src: url($f-url) format($f-format)
 
 /* open-sans-regular - cyrillic_latin */
-@include font('Open Sans', normal, 400, '../fonts/open-sans-v17-cyrillic_latin-regular.woff2', 'woff2' ) /* Super Modern Browsers */
-@include font('Open Sans', normal, 400, '../fonts/open-sans-v17-cyrillic_latin-regular.woff', 'woff' ) /* Modern Browsers */
-@include font('Open Sans', normal, 400, '../fonts/open-sans-v17-cyrillic_latin-regular.ttf', 'truetype' ) /* Safari, Android, iOS */
-@include font('Open Sans', normal, 400, '../fonts/open-sans-v17-cyrillic_latin-regular.svg#Montserrat', 'svg' ) /* Legacy iOS */
+	@include font('Open Sans', normal, 400, '../fonts/open-sans-v17-cyrillic_latin-regular.woff2', 'woff2' ) /* Super Modern Browsers */
+	@include font('Open Sans', normal, 400, '../fonts/open-sans-v17-cyrillic_latin-regular.woff', 'woff' ) /* Modern Browsers */
+	@include font('Open Sans', normal, 400, '../fonts/open-sans-v17-cyrillic_latin-regular.ttf', 'truetype' ) /* Safari, Android, iOS */
+	@include font('Open Sans', normal, 400, '../fonts/open-sans-v17-cyrillic_latin-regular.svg#Montserrat', 'svg' ) /* Legacy iOS */
 /* open-sans-700 - cyrillic_latin */
-@include font('Open Sans', normal, 700, '../fonts/open-sans-v17-cyrillic_latin-700.woff2', 'woff2' ) /* Super Modern Browsers */
-@include font('Open Sans', normal, 700, '../fonts/open-sans-v17-cyrillic_latin-700.woff', 'woff' ) /* Modern Browsers */
-@include font('Open Sans', normal, 700, '../fonts/open-sans-v17-cyrillic_latin-700.ttf', 'truetype' ) /* Safari, Android, iOS */
-@include font('Open Sans', normal, 700, '../fonts/open-sans-v17-cyrillic_latin-700.svg#Montserrat', 'svg' ) /* Legacy iOS */
+	@include font('Open Sans', normal, 700, '../fonts/open-sans-v17-cyrillic_latin-700.woff2', 'woff2' ) /* Super Modern Browsers */
+	@include font('Open Sans', normal, 700, '../fonts/open-sans-v17-cyrillic_latin-700.woff', 'woff' ) /* Modern Browsers */
+	@include font('Open Sans', normal, 700, '../fonts/open-sans-v17-cyrillic_latin-700.ttf', 'truetype' ) /* Safari, Android, iOS */
+	@include font('Open Sans', normal, 700, '../fonts/open-sans-v17-cyrillic_latin-700.svg#Montserrat', 'svg' ) /* Legacy iOS */
 
 /* open-sans-600 - cyrillic_latin */
-@include font('Open Sans', normal, 600, '../fonts/open-sans-v17-cyrillic_latin-600.woff2', 'woff2' ) /* Super Modern Browsers */
-@include font('Open Sans', normal, 600, '../fonts/open-sans-v17-cyrillic_latin-600.woff', 'woff' ) /* Modern Browsers */
-@include font('Open Sans', normal, 600, '../fonts/open-sans-v17-cyrillic_latin-600.ttf', 'truetype' ) /* Safari, Android, iOS */
-@include font('Open Sans', normal, 600, '../fonts/open-sans-v17-cyrillic_latin-600.svg#Montserrat', 'svg' ) /* Legacy iOS */
+	@include font('Open Sans', normal, 600, '../fonts/open-sans-v17-cyrillic_latin-600.woff2', 'woff2' ) /* Super Modern Browsers */
+	@include font('Open Sans', normal, 600, '../fonts/open-sans-v17-cyrillic_latin-600.woff', 'woff' ) /* Modern Browsers */
+	@include font('Open Sans', normal, 600, '../fonts/open-sans-v17-cyrillic_latin-600.ttf', 'truetype' ) /* Safari, Android, iOS */
+	@include font('Open Sans', normal, 600, '../fonts/open-sans-v17-cyrillic_latin-600.svg#Montserrat', 'svg' ) /* Legacy iOS */
 
 /* montserrat-300 - cyrillic */
-@include font('Montserrat', normal, 300, '../fonts/montserrat-v14-cyrillic-300.woff2', 'woff2' ) /* Super Modern Browsers */
-@include font('Montserrat', normal, 300, '../fonts/montserrat-v14-cyrillic-300.woff', 'woff' ) /* Modern Browsers */
-@include font('Montserrat', normal, 300, '../fonts/montserrat-v14-cyrillic-300.ttf', 'truetype' ) /* Safari, Android, iOS */
-@include font('Montserrat', normal, 300, '../fonts/montserrat-v14-cyrillic-300.svg#Montserrat', 'svg' ) /* Legacy iOS */
+	@include font('Montserrat', normal, 300, '../fonts/montserrat-v14-cyrillic-300.woff2', 'woff2' ) /* Super Modern Browsers */
+	@include font('Montserrat', normal, 300, '../fonts/montserrat-v14-cyrillic-300.woff', 'woff' ) /* Modern Browsers */
+	@include font('Montserrat', normal, 300, '../fonts/montserrat-v14-cyrillic-300.ttf', 'truetype' ) /* Safari, Android, iOS */
+	@include font('Montserrat', normal, 300, '../fonts/montserrat-v14-cyrillic-300.svg#Montserrat', 'svg' ) /* Legacy iOS */
 
 /* montserrat-regular - cyrillic */
-@include font('Montserrat', normal, 400, '../fonts/montserrat-v14-cyrillic-regular.woff2', 'woff2' ) /* Super Modern Browsers */
-@include font('Montserrat', normal, 400, '../fonts/montserrat-v14-cyrillic-regular.woff', 'woff' ) /* Modern Browsers */
-@include font('Montserrat', normal, 400, '../fonts/montserrat-v14-cyrillic-regular.ttf', 'truetype' ) /* Safari, Android, iOS */
-@include font('Montserrat', normal, 400, '../fonts/montserrat-v14-cyrillic-regular.svg#Montserrat', 'svg' ) /* Legacy iOS */
+	@include font('Montserrat', normal, 400, '../fonts/montserrat-v14-cyrillic-regular.woff2', 'woff2' ) /* Super Modern Browsers */
+	@include font('Montserrat', normal, 400, '../fonts/montserrat-v14-cyrillic-regular.woff', 'woff' ) /* Modern Browsers */
+	@include font('Montserrat', normal, 400, '../fonts/montserrat-v14-cyrillic-regular.ttf', 'truetype' ) /* Safari, Android, iOS */
+	@include font('Montserrat', normal, 400, '../fonts/montserrat-v14-cyrillic-regular.svg#Montserrat', 'svg' ) /* Legacy iOS */
 
 /* montserrat-500 - cyrillic */
-@include font('Montserrat', normal, 500, '../fonts/montserrat-v14-cyrillic-500.woff2', 'woff2' ) /* Super Modern Browsers */
-@include font('Montserrat', normal, 500, '../fonts/montserrat-v14-cyrillic-500.woff', 'woff' ) /* Modern Browsers */
-@include font('Montserrat', normal, 500, '../fonts/montserrat-v14-cyrillic-500.ttf', 'truetype' ) /* Safari, Android, iOS */
-@include font('Montserrat', normal, 500, '../fonts/montserrat-v14-cyrillic-500.svg#Montserrat', 'svg' ) /* Legacy iOS */
+	@include font('Montserrat', normal, 500, '../fonts/montserrat-v14-cyrillic-500.woff2', 'woff2' ) /* Super Modern Browsers */
+	@include font('Montserrat', normal, 500, '../fonts/montserrat-v14-cyrillic-500.woff', 'woff' ) /* Modern Browsers */
+	@include font('Montserrat', normal, 500, '../fonts/montserrat-v14-cyrillic-500.ttf', 'truetype' ) /* Safari, Android, iOS */
+	@include font('Montserrat', normal, 500, '../fonts/montserrat-v14-cyrillic-500.svg#Montserrat', 'svg' ) /* Legacy iOS */
 
 /* montserrat-600 - cyrillic */
-@include font('Montserrat', normal, 600, '../fonts/montserrat-v14-cyrillic-600.woff2', 'woff2' ) /* Super Modern Browsers */
-@include font('Montserrat', normal, 600, '../fonts/montserrat-v14-cyrillic-600.woff', 'woff' ) /* Modern Browsers */
-@include font('Montserrat', normal, 600, '../fonts/montserrat-v14-cyrillic-600.ttf', 'truetype' ) /* Safari, Android, iOS */
-@include font('Montserrat', normal, 600, '../fonts/montserrat-v14-cyrillic-600.svg#Montserrat', 'svg' ) /* Legacy iOS */
+	@include font('Montserrat', normal, 600, '../fonts/montserrat-v14-cyrillic-600.woff2', 'woff2' ) /* Super Modern Browsers */
+	@include font('Montserrat', normal, 600, '../fonts/montserrat-v14-cyrillic-600.woff', 'woff' ) /* Modern Browsers */
+	@include font('Montserrat', normal, 600, '../fonts/montserrat-v14-cyrillic-600.ttf', 'truetype' ) /* Safari, Android, iOS */
+	@include font('Montserrat', normal, 600, '../fonts/montserrat-v14-cyrillic-600.svg#Montserrat', 'svg' ) /* Legacy iOS */
 
 /* montserrat-700 - cyrillic */
-@include font('Montserrat', normal, 700, '../fonts/montserrat-v14-cyrillic-700.woff2', 'woff2' ) /* Super Modern Browsers */
-@include font('Montserrat', normal, 700, '../fonts/montserrat-v14-cyrillic-700.woff', 'woff' ) /* Modern Browsers */
-@include font('Montserrat', normal, 700, '../fonts/montserrat-v14-cyrillic-700.ttf', 'truetype' ) /* Safari, Android, iOS */
-@include font('Montserrat', normal, 700, '../fonts/montserrat-v14-cyrillic-700.svg#Montserrat', 'svg' ) /* Legacy iOS */
+	@include font('Montserrat', normal, 700, '../fonts/montserrat-v14-cyrillic-700.woff2', 'woff2' ) /* Super Modern Browsers */
+	@include font('Montserrat', normal, 700, '../fonts/montserrat-v14-cyrillic-700.woff', 'woff' ) /* Modern Browsers */
+	@include font('Montserrat', normal, 700, '../fonts/montserrat-v14-cyrillic-700.ttf', 'truetype' ) /* Safari, Android, iOS */
+	@include font('Montserrat', normal, 700, '../fonts/montserrat-v14-cyrillic-700.svg#Montserrat', 'svg' ) /* Legacy iOS */
 
 /* montserrat-900 - cyrillic */
-@include font('Montserrat', normal, 900, '../fonts/montserrat-v14-cyrillic-900.woff2', 'woff2' ) /* Super Modern Browsers */
-@include font('Montserrat', normal, 900, '../fonts/montserrat-v14-cyrillic-900.woff', 'woff' ) /* Modern Browsers */
-@include font('Montserrat', normal, 900, '../fonts/montserrat-v14-cyrillic-900.ttf', 'truetype' ) /* Safari, Android, iOS */
-@include font('Montserrat', normal, 900, '../fonts/montserrat-v14-cyrillic-900.svg#Montserrat', 'svg' ) /* Legacy iOS */
+	@include font('Montserrat', normal, 900, '../fonts/montserrat-v14-cyrillic-900.woff2', 'woff2' ) /* Super Modern Browsers */
+	@include font('Montserrat', normal, 900, '../fonts/montserrat-v14-cyrillic-900.woff', 'woff' ) /* Modern Browsers */
+	@include font('Montserrat', normal, 900, '../fonts/montserrat-v14-cyrillic-900.ttf', 'truetype' ) /* Safari, Android, iOS */
+	@include font('Montserrat', normal, 900, '../fonts/montserrat-v14-cyrillic-900.svg#Montserrat', 'svg' ) /* Legacy iOS */

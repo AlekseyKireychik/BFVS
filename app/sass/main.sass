@@ -1,7 +1,7 @@
 @import vars
 @import fonts
 @import libs
-@import media
+// @import media
 
 ::placeholder
 	color: rgba(0, 0, 0, 0.5)
@@ -985,9 +985,9 @@ header
 			margin-top: 60px
 			.row
 				> div
-					padding: 45px
-					+media-breakpoint-down(sm)
-						padding: 45px 15px
+				padding: 45px
+				+media-breakpoint-down(sm)
+					padding: 45px 15px
 					.applicationform__group
 						display: flex
 						flex-direction: column
@@ -1299,17 +1299,3 @@ footer
 				.footer__link
 					.footer__img
 						object-fit: cover
-
-.example-grid
-	display: grid
-	grid-gap: $gutter
-	grid-template-columns: 1fr 1fr
-	grid-template-areas: "left right"
-	> div:first-child
-	grid-area: left
-	> div:last-child
-	grid-area: right
-	+media-breakpoint-down(xs)
-		display: block
-		> div
-		padding: $gutter/2 0
